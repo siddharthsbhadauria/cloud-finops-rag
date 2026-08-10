@@ -11,11 +11,12 @@
 
 ```mermaid
 flowchart LR
-    A[AWS / GCP / Azure Pricing APIs] & B[Hugging Face LLM Evals] --> C[GitHub Actions CRON Pipeline]
-    C -->|Python Ingestion| D[Great Expectations Quality Contract]
-    D -->|Passed| E[Polars & DuckDB Analytics Engine]
-    E -->|Tokens/Dollar & Efficiency Index| F[ChromaDB Vector & RAG Brief]
-    F -->|Dataset Export| G[GitHub Pages Web Dashboard]
+    A["AWS / GCP / Azure Pricing APIs"] --> C["GitHub Actions CRON Pipeline"]
+    B["Hugging Face LLM Evals"] --> C
+    C -->|Python Ingestion| D["Great Expectations Quality Contract"]
+    D -->|Passed| E["Polars & DuckDB Analytics Engine"]
+    E -->|Tokens/Dollar & Efficiency Index| F["ChromaDB Vector & RAG Brief"]
+    F -->|Dataset Export| G["GitHub Pages Web Dashboard"]
 ```
 
 ---
