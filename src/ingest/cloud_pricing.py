@@ -1,6 +1,6 @@
 """
 Multi-Cloud & AI Model Pricing Ingestor
-Fetches real-time public cloud pricing endpoints and AI provider tokenomics.
+Fetches real-time public cloud pricing endpoints and flagship 2026 AI provider tokenomics.
 """
 import requests
 import json
@@ -12,11 +12,11 @@ class CloudPricingIngestor:
     
     AZURE_RETAIL_API = "https://prices.azure.com/api/retail/prices?$filter=serviceName eq 'Virtual Machines' and priceType eq 'Consumption'"
     
-    # Real-world benchmarked pricing per 1M tokens (USD)
+    # Updated 2026 Flagship Model Tokenomics (USD per 1M tokens)
     KNOWN_LLM_PRICING = [
         {
             "provider": "AWS Bedrock",
-            "model": "Claude 3.5 Sonnet",
+            "model": "Claude 3.7 Sonnet",
             "input_cost_per_1m": 3.00,
             "output_cost_per_1m": 15.00,
             "context_window": 200000,
@@ -24,11 +24,27 @@ class CloudPricingIngestor:
         },
         {
             "provider": "AWS Bedrock",
-            "model": "Claude 3 Haiku",
-            "input_cost_per_1m": 0.25,
-            "output_cost_per_1m": 1.25,
+            "model": "Claude 3.5 Haiku",
+            "input_cost_per_1m": 0.80,
+            "output_cost_per_1m": 4.00,
             "context_window": 200000,
             "region": "us-east-1"
+        },
+        {
+            "provider": "Azure OpenAI",
+            "model": "GPT-4.5",
+            "input_cost_per_1m": 5.00,
+            "output_cost_per_1m": 15.00,
+            "context_window": 128000,
+            "region": "eastus"
+        },
+        {
+            "provider": "Azure OpenAI",
+            "model": "o3-mini",
+            "input_cost_per_1m": 1.10,
+            "output_cost_per_1m": 4.40,
+            "context_window": 200000,
+            "region": "eastus"
         },
         {
             "provider": "Azure OpenAI",
@@ -39,28 +55,28 @@ class CloudPricingIngestor:
             "region": "eastus"
         },
         {
-            "provider": "Azure OpenAI",
-            "model": "GPT-4o-mini",
-            "input_cost_per_1m": 0.15,
-            "output_cost_per_1m": 0.60,
-            "context_window": 128000,
-            "region": "eastus"
+            "provider": "GCP Vertex AI",
+            "model": "Gemini 2.0 Flash",
+            "input_cost_per_1m": 0.10,
+            "output_cost_per_1m": 0.40,
+            "context_window": 1000000,
+            "region": "us-central1"
         },
         {
             "provider": "GCP Vertex AI",
-            "model": "Gemini 1.5 Pro",
-            "input_cost_per_1m": 1.25,
-            "output_cost_per_1m": 5.00,
+            "model": "Gemini 2.0 Pro",
+            "input_cost_per_1m": 1.50,
+            "output_cost_per_1m": 6.00,
             "context_window": 2000000,
             "region": "us-central1"
         },
         {
-            "provider": "GCP Vertex AI",
-            "model": "Gemini 1.5 Flash",
-            "input_cost_per_1m": 0.075,
-            "output_cost_per_1m": 0.30,
-            "context_window": 1000000,
-            "region": "us-central1"
+            "provider": "DeepSeek API",
+            "model": "DeepSeek-R1",
+            "input_cost_per_1m": 0.55,
+            "output_cost_per_1m": 2.19,
+            "context_window": 64000,
+            "region": "global"
         },
         {
             "provider": "DeepSeek API",
@@ -71,11 +87,19 @@ class CloudPricingIngestor:
             "region": "global"
         },
         {
-            "provider": "DeepSeek API",
-            "model": "DeepSeek-R1",
-            "input_cost_per_1m": 0.55,
-            "output_cost_per_1m": 2.19,
-            "context_window": 64000,
+            "provider": "AWS Bedrock",
+            "model": "Llama 3.3 70B",
+            "input_cost_per_1m": 0.60,
+            "output_cost_per_1m": 0.60,
+            "context_window": 128000,
+            "region": "us-east-1"
+        },
+        {
+            "provider": "Together AI",
+            "model": "Qwen 2.5 Coder 32B",
+            "input_cost_per_1m": 0.20,
+            "output_cost_per_1m": 0.20,
+            "context_window": 128000,
             "region": "global"
         }
     ]

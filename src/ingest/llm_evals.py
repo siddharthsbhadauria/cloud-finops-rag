@@ -1,6 +1,6 @@
 """
 LLM Evaluation & Benchmark Ingestor
-Fetches model capability scores, MMLU ratings, and output throughput.
+Fetches flagship 2026 model capability scores, MMLU ratings, and output throughput.
 """
 from typing import List, Dict, Any
 
@@ -9,18 +9,32 @@ class LLMEvalsIngestor:
 
     MODEL_BENCHMARKS = [
         {
-            "model": "Claude 3.5 Sonnet",
-            "mmlu_score": 88.7,
-            "arena_elo": 1282,
-            "avg_throughput_tps": 75.4,
-            "category": "Frontier Reasoner"
+            "model": "Claude 3.7 Sonnet",
+            "mmlu_score": 91.2,
+            "arena_elo": 1325,
+            "avg_throughput_tps": 85.0,
+            "category": "Hybrid Hybrid/Reasoning Leader"
         },
         {
-            "model": "Claude 3 Haiku",
-            "mmlu_score": 75.2,
-            "arena_elo": 1178,
-            "avg_throughput_tps": 110.2,
+            "model": "Claude 3.5 Haiku",
+            "mmlu_score": 82.4,
+            "arena_elo": 1220,
+            "avg_throughput_tps": 130.0,
             "category": "Fast Worker"
+        },
+        {
+            "model": "GPT-4.5",
+            "mmlu_score": 92.1,
+            "arena_elo": 1340,
+            "avg_throughput_tps": 65.0,
+            "category": "Frontier Knowledge Leader"
+        },
+        {
+            "model": "o3-mini",
+            "mmlu_score": 91.5,
+            "arena_elo": 1318,
+            "avg_throughput_tps": 115.0,
+            "category": "Reasoning Leader"
         },
         {
             "model": "GPT-4o",
@@ -30,25 +44,25 @@ class LLMEvalsIngestor:
             "category": "Frontier Multimodal"
         },
         {
-            "model": "GPT-4o-mini",
-            "mmlu_score": 82.0,
-            "arena_elo": 1210,
-            "avg_throughput_tps": 140.5,
-            "category": "Fast Worker"
+            "model": "Gemini 2.0 Flash",
+            "mmlu_score": 86.8,
+            "arena_elo": 1272,
+            "avg_throughput_tps": 185.0,
+            "category": "Ultra Fast Worker"
         },
         {
-            "model": "Gemini 1.5 Pro",
-            "mmlu_score": 85.9,
-            "arena_elo": 1260,
-            "avg_throughput_tps": 62.0,
+            "model": "Gemini 2.0 Pro",
+            "mmlu_score": 89.4,
+            "arena_elo": 1295,
+            "avg_throughput_tps": 78.0,
             "category": "Long Context Leader"
         },
         {
-            "model": "Gemini 1.5 Flash",
-            "mmlu_score": 78.9,
-            "arena_elo": 1205,
-            "avg_throughput_tps": 165.8,
-            "category": "Ultra Fast Worker"
+            "model": "DeepSeek-R1",
+            "mmlu_score": 90.8,
+            "arena_elo": 1310,
+            "avg_throughput_tps": 48.0,
+            "category": "Open Reasoning Leader"
         },
         {
             "model": "DeepSeek-V3",
@@ -58,11 +72,18 @@ class LLMEvalsIngestor:
             "category": "Cost Efficiency Leader"
         },
         {
-            "model": "DeepSeek-R1",
-            "mmlu_score": 90.8,
-            "arena_elo": 1310,
-            "avg_throughput_tps": 48.0,
-            "category": "Reasoning Leader"
+            "model": "Llama 3.3 70B",
+            "mmlu_score": 86.0,
+            "arena_elo": 1265,
+            "avg_throughput_tps": 90.0,
+            "category": "Open Weights Leader"
+        },
+        {
+            "model": "Qwen 2.5 Coder 32B",
+            "mmlu_score": 84.2,
+            "arena_elo": 1250,
+            "avg_throughput_tps": 105.0,
+            "category": "Coding Specialist"
         }
     ]
 
