@@ -2,6 +2,9 @@
 
 [![FinOps Pipeline](https://github.com/siddharthsbhadauria/cloud-finops-rag/actions/workflows/daily_finops_rag.yml/badge.svg)](https://github.com/siddharthsbhadauria/cloud-finops-rag/actions/workflows/daily_finops_rag.yml)
 [![Pages Deployment](https://github.com/siddharthsbhadauria/cloud-finops-rag/actions/workflows/deploy_pages.yml/badge.svg)](https://github.com/siddharthsbhadauria/cloud-finops-rag/actions/workflows/deploy_pages.yml)
+[![Live Dashboard](https://img.shields.io/badge/Live%20Dashboard-GitHub%20Pages-6366f1?style=flat&logo=github)](https://siddharthsbhadauria.github.io/cloud-finops-rag/)
+
+> 🌐 **Live Web Application**: [https://siddharthsbhadauria.github.io/cloud-finops-rag/](https://siddharthsbhadauria.github.io/cloud-finops-rag/)
 
 **Cloud-FinOps-RAG** is a serverless, cloud-native data engineering pipeline and intelligence engine built on **GitHub Actions**. It automatically ingests multi-cloud AI tokenomics (AWS Bedrock, Azure OpenAI, GCP Vertex AI, DeepSeek), validates schemas using **Great Expectations** assertions, computes cost-per-intelligence ratios via **Polars & DuckDB**, generates vector search indices for RAG summaries, and publishes a live dashboard on **GitHub Pages**.
 
