@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud FinOps & AI Tokenomics Evaluator</title>
+  <meta name="description" content="Autonomous Cloud AI Tokenomics & Multi-Cloud Price Benchmark Evaluator powered by DuckDB, Polars, and RAG.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css?v=1.0.0">
+
+  <!-- Cache Control Meta Tags -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+</head>
+<body>
+  <!-- Ambient background glow -->
+  <div class="glow-bg glow-purple"></div>
+  <div class="glow-bg glow-cyan"></div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="brand">
+        <span class="brand-icon">📊</span>
+        <div class="brand-text">
+          <span class="brand-title">Cloud FinOps & AI Evaluator</span>
+          <span class="brand-tag">Multi-Cloud Tokenomics Matrix</span>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <button id="themeToggle" class="btn btn-icon-theme" title="Toggle Light / Dark Mode">
+          <span class="theme-icon-dark">🌙</span>
+          <span class="theme-icon-light">☀️</span>
+          <span class="theme-text">Theme</span>
+        </button>
+
+        <span class="status-badge pulse-dot">
+          <span class="dot"></span> Actions Automation Active
+        </span>
+        <a href="https://github.com/siddharthsbhadauria/cloud-finops-rag" target="_blank" rel="noopener" class="btn btn-github">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span class="btn-github-text">GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section container">
+    <div class="hero-badge">
+      <span class="sparkle">⚡</span> Automated Multi-Cloud FinOps Pipeline
+    </div>
+    <h1 class="hero-title">
+      Autonomous AI Tokenomics & <br>
+      <span class="gradient-text">Cost Efficiency Matrix</span>
+    </h1>
+    <p class="hero-subtitle">
+      Real-time evaluation of AWS Bedrock, Azure OpenAI, GCP Vertex AI, and Open API provider pricing joined against MMLU and throughput benchmarks.
+    </p>
+
+    <!-- Stats Bar -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-number" id="statModels">--</span>
+        <span class="stat-label">LLM Models Tracked</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" id="statProviders">--</span>
+        <span class="stat-label">Cloud Providers</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" id="statTopEfficiency">--</span>
+        <span class="stat-label">Top Efficiency Score</span>
+      </div>
+    </div>
+
+    <!-- RAG Executive Brief Banner -->
+    <div class="featured-banner">
+      <div class="featured-badge">💡 Daily AI FinOps Executive Summary</div>
+      <div id="ragBriefContent" class="rag-content">
+        <p>Loading autonomous RAG analysis...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Controls & Matrix Section -->
+  <main class="main-content container">
+    <div class="controls-card">
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Search by model, provider (AWS, Azure, GCP), or category..." autocomplete="off">
+        <button id="clearSearch" class="btn-clear">✕</button>
+      </div>
+
+      <div class="filter-row">
+        <div class="categories-scroll" id="providerContainer">
+          <button class="cat-pill active" data-provider="ALL">All Providers</button>
+        </div>
+
+        <div class="toolbar-right">
+          <div class="sort-select-wrapper">
+            <select id="sortSelect">
+              <option value="eff-desc">Highest Efficiency Score</option>
+              <option value="cost-asc">Lowest Token Cost</option>
+              <option value="mmlu-desc">Highest MMLU Score</option>
+              <option value="tps-desc">Highest Throughput (t/s)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="results-summary">
+      <span id="resultsCount">Showing all models</span>
+      <span id="lastUpdatedTag" class="time-tag">Last updated: --</span>
+    </div>
+
+    <!-- Model Comparison Table -->
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Provider</th>
+            <th>MMLU</th>
+            <th>Tokens / $1</th>
+            <th>Input / 1M</th>
+            <th>Output / 1M</th>
+            <th>Blended / 1M</th>
+            <th>Efficiency Index</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Rows injected dynamically -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>Cloud-FinOps-RAG &copy; 2026. Data quality verified via Great Expectations & DuckDB.</p>
+      <div class="footer-links">
+        <a href="https://github.com/siddharthsbhadauria/cloud-finops-rag" target="_blank" rel="noopener">GitHub Repository</a>
+        <a href="README.md" target="_blank">View Architecture Docs</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data/finops_dataset.js"></script>
+  <script src="app.js?v=1.0.0"></script>
+</body>
+</html>
