@@ -1,22 +1,22 @@
 window.FINOPS_DATA = {
-  "generated_at": "2026-08-11T05:05:43Z",
+  "generated_at": "2026-08-12T05:29:55Z",
   "total_models_tracked": 40,
   "providers": [
-    "Qwen / Alibaba",
-    "Mistral AI",
+    "Google / GCP",
     "Other Provider",
     "DeepSeek API",
     "Meta AI",
-    "OpenAI / Azure",
     "Anthropic / AWS",
-    "Google / GCP"
+    "OpenAI / Azure",
+    "Qwen / Alibaba",
+    "Mistral AI"
   ],
   "summary": {
-    "timestamp": "2026-08-11 05:05 UTC",
+    "timestamp": "2026-08-12 05:29 UTC",
     "best_efficiency": "Qwen: Qwen3.7 Flash",
     "lowest_cost": "Qwen: Qwen3.7 Flash",
     "top_frontier": "Gemini 3.6 Flash",
-    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-08-11 05:05 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Qwen: Qwen3.7 Flash** (Qwen / Alibaba) with an Efficiency Score of **1530.91** (MMLU: 84.2 @ $0.055/1M tokens).\n2. **Lowest Blended Token Cost**: **Qwen: Qwen3.7 Flash** (Qwen / Alibaba) at **$0.055 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Gemini 3.6 Flash** with an MMLU score of **94.5**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Qwen: Qwen3.7 Flash** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Qwen: Qwen3.7 Flash** or **Gemini 3.6 Flash** for optimal balance between accuracy and cost."
+    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-08-12 05:29 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Qwen: Qwen3.7 Flash** (Qwen / Alibaba) with an Efficiency Score of **1530.91** (MMLU: 84.2 @ $0.055/1M tokens).\n2. **Lowest Blended Token Cost**: **Qwen: Qwen3.7 Flash** (Qwen / Alibaba) at **$0.055 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Gemini 3.6 Flash** with an MMLU score of **94.5**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Qwen: Qwen3.7 Flash** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Qwen: Qwen3.7 Flash** or **Gemini 3.6 Flash** for optimal balance between accuracy and cost."
   },
   "models": [
     {
@@ -215,17 +215,17 @@ window.FINOPS_DATA = {
       "provider": "DeepSeek API",
       "model": "DeepSeek V3.1 Terminus",
       "input_cost_per_1m": 0.27,
-      "output_cost_per_1m": 1.0,
+      "output_cost_per_1m": 0.95,
       "context_window": 163840,
       "region": "global",
       "mmlu_score": 79.3,
       "arena_elo": 1295,
       "avg_throughput_tps": 80.0,
       "category": "API AI Model",
-      "blended_cost_per_1m": 0.4525,
-      "tokens_per_dollar": 2209944,
-      "tokens_per_dollar_formatted": "2,209,944",
-      "efficiency_score": 175.25
+      "blended_cost_per_1m": 0.44,
+      "tokens_per_dollar": 2272727,
+      "tokens_per_dollar_formatted": "2,272,727",
+      "efficiency_score": 180.23
     },
     {
       "provider": "Other Provider",
@@ -292,6 +292,22 @@ window.FINOPS_DATA = {
       "efficiency_score": 150.36
     },
     {
+      "provider": "Other Provider",
+      "model": "Z.ai: GLM 5.2",
+      "input_cost_per_1m": 0.42,
+      "output_cost_per_1m": 1.4,
+      "context_window": 1048576,
+      "region": "global",
+      "mmlu_score": 86.4,
+      "arena_elo": 1303,
+      "avg_throughput_tps": 80.0,
+      "category": "API AI Model",
+      "blended_cost_per_1m": 0.665,
+      "tokens_per_dollar": 1503759,
+      "tokens_per_dollar_formatted": "1,503,759",
+      "efficiency_score": 129.92
+    },
+    {
       "provider": "Qwen / Alibaba",
       "model": "Qwen2.5 Coder 32B Instruct",
       "input_cost_per_1m": 0.66,
@@ -322,22 +338,6 @@ window.FINOPS_DATA = {
       "tokens_per_dollar": 1176470,
       "tokens_per_dollar_formatted": "1,176,470",
       "efficiency_score": 110.35
-    },
-    {
-      "provider": "Other Provider",
-      "model": "Z.ai: GLM 5.2",
-      "input_cost_per_1m": 0.76,
-      "output_cost_per_1m": 2.42,
-      "context_window": 1048576,
-      "region": "global",
-      "mmlu_score": 86.4,
-      "arena_elo": 1303,
-      "avg_throughput_tps": 80.0,
-      "category": "API AI Model",
-      "blended_cost_per_1m": 1.175,
-      "tokens_per_dollar": 851063,
-      "tokens_per_dollar_formatted": "851,063",
-      "efficiency_score": 73.53
     },
     {
       "provider": "Other Provider",
