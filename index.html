@@ -113,28 +113,26 @@
 
   <!-- Controls & Matrix Section -->
   <main class="main-content container">
-    <div class="controls-card">
-      <div class="search-bar">
-        <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="text" id="searchInput" placeholder="Search by model, provider (AWS, Azure, GCP), or category..." autocomplete="off">
-        <button id="clearSearch" class="btn-clear">✕</button>
-      </div>
-
+    <!-- Controls & Matrix Section -->
+    <div class="controls-bar">
       <div class="filter-row">
         <div class="categories-scroll" id="providerContainer">
           <button class="cat-pill active" data-provider="ALL">All Providers</button>
         </div>
 
-        <div class="toolbar-right">
-          <div class="sort-select-wrapper">
-            <select id="sortSelect">
-              <option value="eff-desc">Highest Efficiency Score</option>
-              <option value="cost-asc">Lowest Token Cost</option>
-              <option value="mmlu-desc">Highest MMLU Score</option>
-              <option value="tps-desc">Highest Throughput (t/s)</option>
-            </select>
-          </div>
+        <div class="sort-select-wrapper">
+          <select id="sortSelect">
+            <option value="eff-desc">Highest Efficiency Score</option>
+            <option value="cost-asc">Lowest Token Cost</option>
+            <option value="mmlu-desc">Highest MMLU Score</option>
+            <option value="tps-desc">Highest Throughput (t/s)</option>
+          </select>
         </div>
+      </div>
+
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search by model, provider (AWS, Azure, GCP), or category..." autocomplete="off">
       </div>
     </div>
 
