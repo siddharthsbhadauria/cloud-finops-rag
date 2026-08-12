@@ -29,8 +29,22 @@ function initTheme() {
       const newTheme = currentTheme === 'light' ? 'dark' : 'light';
       document.documentElement.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
+      showToast(newTheme === 'dark' ? '🌙 Dark Mode Activated' : '☀️ Light Mode Activated');
     });
   }
+}
+
+function showToast(message) {
+  const toast = document.getElementById('toast');
+  const toastMsg = document.getElementById('toastMessage');
+  if (!toast || !toastMsg) return;
+
+  toastMsg.textContent = message;
+  toast.classList.add('show');
+
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 3000);
 }
 
 async function initApp() {
@@ -182,11 +196,11 @@ function renderTable(items) {
     <tr>
       <td style="font-weight: 700; color: var(--text-main);">${item.model}</td>
       <td><span class="pill-provider">${item.provider}</span></td>
-      <td style="font-family: var(--font-mono); font-weight: 700; color: #38bdf8;">${item.mmlu_score}</td>
+      <td style="font-family: var(--font-mono); font-weight: 700; color: var(--accent-cyan);">${item.mmlu_score}</td>
       <td style="font-family: var(--font-mono); font-weight: 700; color: var(--text-main);">${item.tokens_per_dollar_formatted}</td>
       <td style="font-family: var(--font-mono);">$${item.input_cost_per_1m.toFixed(3)}</td>
       <td style="font-family: var(--font-mono);">$${item.output_cost_per_1m.toFixed(3)}</td>
-      <td style="font-family: var(--font-mono); font-weight: 700; color: #fbbf24;">$${item.blended_cost_per_1m.toFixed(3)}</td>
+      <td style="font-family: var(--font-mono); font-weight: 700; color: var(--accent-amber);">$${item.blended_cost_per_1m.toFixed(3)}</td>
       <td><span class="score-badge">⚡ ${item.efficiency_score}</span></td>
     </tr>
   `).join('');

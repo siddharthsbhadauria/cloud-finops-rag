@@ -3,21 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cloud FinOps & AI Tokenomics Evaluator</title>
+  <title>Cloud FinOps & AI Tokenomics Evaluator | Multi-Cloud Pricing Matrix</title>
   <meta name="description" content="Autonomous Cloud AI Tokenomics & Multi-Cloud Price Benchmark Evaluator powered by DuckDB, Polars, and RAG.">
-  
-  <!-- Fonts -->
+  <meta name="author" content="Siddharth Singh Bhadauria">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="Cloud FinOps & AI Tokenomics Evaluator">
+  <meta property="og:description" content="Multi-Cloud AI price benchmarking and efficiency score calculator for AWS Bedrock, Azure OpenAI, GCP Vertex AI, and DeepSeek.">
+
+  <!-- Google Fonts: JetBrains Mono (Universal Digital Font) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="style.css?v=1.0.0">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css?v=2.0.0">
 
   <!-- Cache Control Meta Tags -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
 
+  <!-- Dynamic SVG Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
 </head>
 <body>
@@ -28,23 +34,26 @@
   <!-- Header / Navigation -->
   <header class="navbar">
     <div class="container nav-content">
-      <div class="brand">
-        <span class="brand-icon">📊</span>
+      <a href="#" class="brand" title="Cloud FinOps & AI Evaluator">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
         <div class="brand-text">
           <span class="brand-title">Cloud FinOps & AI Evaluator</span>
           <span class="brand-tag">Multi-Cloud Tokenomics Matrix</span>
         </div>
-      </div>
+      </a>
+
       <div class="nav-actions">
-        <button id="themeToggle" class="btn btn-icon-theme" title="Toggle Light / Dark Mode">
+        <button id="themeToggle" class="btn-icon-theme" title="Toggle Theme" aria-label="Toggle Theme">
           <span class="theme-icon-dark">🌙</span>
           <span class="theme-icon-light">☀️</span>
-          <span class="theme-text">Theme</span>
         </button>
 
         <span class="status-badge pulse-dot">
           <span class="dot"></span> Actions Automation Active
         </span>
+
         <a href="https://github.com/siddharthsbhadauria/cloud-finops-rag" target="_blank" rel="noopener" class="btn btn-github">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           <span class="btn-github-text">GitHub</span>
@@ -82,11 +91,22 @@
       </div>
     </div>
 
-    <!-- RAG Executive Brief Banner -->
-    <div class="featured-banner">
-      <div class="featured-badge">💡 Daily AI FinOps Executive Summary</div>
-      <div id="ragBriefContent" class="rag-content">
-        <p>Loading autonomous RAG analysis...</p>
+    <!-- RAG Executive Brief Terminal Window -->
+    <div class="cyber-terminal featured-terminal">
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+        </div>
+        <span class="terminal-title">siddharth@github:~/cloud-finops-rag</span>
+        <span class="terminal-badge">RAG ACTIVE</span>
+      </div>
+      <div class="terminal-body">
+        <div class="featured-badge">💡 Daily AI FinOps Executive Summary</div>
+        <div id="ragBriefContent" class="rag-content">
+          <p>Loading autonomous RAG analysis...</p>
+        </div>
       </div>
     </div>
   </section>
@@ -95,7 +115,7 @@
   <main class="main-content container">
     <div class="controls-card">
       <div class="search-bar">
-        <span class="search-icon">🔍</span>
+        <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         <input type="text" id="searchInput" placeholder="Search by model, provider (AWS, Azure, GCP), or category..." autocomplete="off">
         <button id="clearSearch" class="btn-clear">✕</button>
       </div>
@@ -145,10 +165,18 @@
     </div>
   </main>
 
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">
+    <span id="toastMessage">Action completed</span>
+  </div>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-content">
-      <p>Cloud-FinOps-RAG &copy; 2026. Data quality verified via Great Expectations & DuckDB.</p>
+      <div class="footer-brand">
+        <span class="footer-title">Cloud-FinOps-RAG &copy; 2026</span>
+        <span class="footer-sub">Verified via Great Expectations & DuckDB Analytical Engine</span>
+      </div>
       <div class="footer-links">
         <a href="https://github.com/siddharthsbhadauria/cloud-finops-rag" target="_blank" rel="noopener">GitHub Repository</a>
         <a href="README.md" target="_blank">View Architecture Docs</a>
@@ -157,6 +185,6 @@
   </footer>
 
   <script src="data/finops_dataset.js"></script>
-  <script src="app.js?v=1.0.0"></script>
+  <script src="app.js?v=2.0.0"></script>
 </body>
 </html>
