@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-08-13T05:38:30Z",
+  "generated_at": "2026-08-14T05:30:27Z",
   "total_models_tracked": 40,
   "providers": [
-    "Mistral AI",
-    "OpenAI / Azure",
-    "Anthropic / AWS",
     "DeepSeek API",
-    "Other Provider",
-    "Meta AI",
+    "Google / GCP",
     "Qwen / Alibaba",
-    "Google / GCP"
+    "Meta AI",
+    "OpenAI / Azure",
+    "Mistral AI",
+    "Anthropic / AWS",
+    "Other Provider"
   ],
   "summary": {
-    "timestamp": "2026-08-13 05:38 UTC",
+    "timestamp": "2026-08-14 05:30 UTC",
     "best_efficiency": "Qwen: Qwen3.7 Flash",
     "lowest_cost": "Qwen: Qwen3.7 Flash",
     "top_frontier": "Gemini 3.6 Flash",
-    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-08-13 05:38 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Qwen: Qwen3.7 Flash** (Qwen / Alibaba) with an Efficiency Score of **1530.91** (MMLU: 84.2 @ $0.055/1M tokens).\n2. **Lowest Blended Token Cost**: **Qwen: Qwen3.7 Flash** (Qwen / Alibaba) at **$0.055 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Gemini 3.6 Flash** with an MMLU score of **94.5**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Qwen: Qwen3.7 Flash** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Qwen: Qwen3.7 Flash** or **Gemini 3.6 Flash** for optimal balance between accuracy and cost."
+    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-08-14 05:30 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Qwen: Qwen3.7 Flash** (Qwen / Alibaba) with an Efficiency Score of **1530.91** (MMLU: 84.2 @ $0.055/1M tokens).\n2. **Lowest Blended Token Cost**: **Qwen: Qwen3.7 Flash** (Qwen / Alibaba) at **$0.055 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Gemini 3.6 Flash** with an MMLU score of **94.5**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Qwen: Qwen3.7 Flash** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Qwen: Qwen3.7 Flash** or **Gemini 3.6 Flash** for optimal balance between accuracy and cost."
   },
   "models": [
     {
@@ -310,18 +310,34 @@
     {
       "provider": "Other Provider",
       "model": "Z.ai: GLM 5.2",
-      "input_cost_per_1m": 0.5,
-      "output_cost_per_1m": 3.15,
+      "input_cost_per_1m": 0.63,
+      "output_cost_per_1m": 1.98,
       "context_window": 1048576,
       "region": "global",
       "mmlu_score": 86.4,
       "arena_elo": 1303,
       "avg_throughput_tps": 80.0,
       "category": "API AI Model",
-      "blended_cost_per_1m": 1.1625,
-      "tokens_per_dollar": 860215,
-      "tokens_per_dollar_formatted": "860,215",
-      "efficiency_score": 74.32
+      "blended_cost_per_1m": 0.9675,
+      "tokens_per_dollar": 1033591,
+      "tokens_per_dollar_formatted": "1,033,591",
+      "efficiency_score": 89.3
+    },
+    {
+      "provider": "Google / GCP",
+      "model": "Gemini 3.6 Flash",
+      "input_cost_per_1m": 0.75,
+      "output_cost_per_1m": 3.75,
+      "context_window": 1048576,
+      "region": "global",
+      "mmlu_score": 94.5,
+      "arena_elo": 1365,
+      "avg_throughput_tps": 92.0,
+      "category": "Frontier State-of-the-Art Leader",
+      "blended_cost_per_1m": 1.5,
+      "tokens_per_dollar": 666666,
+      "tokens_per_dollar_formatted": "666,666",
+      "efficiency_score": 63.0
     },
     {
       "provider": "Other Provider",
@@ -452,27 +468,11 @@
       "efficiency_score": 43.2
     },
     {
-      "provider": "Google / GCP",
-      "model": "Gemini 3.6 Flash",
-      "input_cost_per_1m": 1.5,
-      "output_cost_per_1m": 7.5,
-      "context_window": 1048576,
-      "region": "global",
-      "mmlu_score": 94.5,
-      "arena_elo": 1365,
-      "avg_throughput_tps": 92.0,
-      "category": "Frontier State-of-the-Art Leader",
-      "blended_cost_per_1m": 3.0,
-      "tokens_per_dollar": 333333,
-      "tokens_per_dollar_formatted": "333,333",
-      "efficiency_score": 31.5
-    },
-    {
       "provider": "Qwen / Alibaba",
       "model": "Qwen: Qwen3.8 2.4T A95B",
       "input_cost_per_1m": 2.0,
       "output_cost_per_1m": 6.0,
-      "context_window": 1000000,
+      "context_window": 1010000,
       "region": "global",
       "mmlu_score": 84.2,
       "arena_elo": 1250,
