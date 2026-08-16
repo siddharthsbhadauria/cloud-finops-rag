@@ -1,22 +1,22 @@
 window.FINOPS_DATA = {
-  "generated_at": "2026-08-15T04:26:32Z",
+  "generated_at": "2026-08-16T04:32:50Z",
   "total_models_tracked": 40,
   "providers": [
-    "Meta AI",
     "Mistral AI",
-    "OpenAI / Azure",
+    "Meta AI",
     "Anthropic / AWS",
-    "DeepSeek API",
-    "Other Provider",
+    "Qwen / Alibaba",
     "Google / GCP",
-    "Qwen / Alibaba"
+    "DeepSeek API",
+    "OpenAI / Azure",
+    "Other Provider"
   ],
   "summary": {
-    "timestamp": "2026-08-15 04:26 UTC",
+    "timestamp": "2026-08-16 04:32 UTC",
     "best_efficiency": "Qwen: Qwen3.7 Flash",
     "lowest_cost": "Qwen: Qwen3.7 Flash",
     "top_frontier": "Gemini 3.6 Flash",
-    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-08-15 04:26 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Qwen: Qwen3.7 Flash** (Qwen / Alibaba) with an Efficiency Score of **1530.91** (MMLU: 84.2 @ $0.055/1M tokens).\n2. **Lowest Blended Token Cost**: **Qwen: Qwen3.7 Flash** (Qwen / Alibaba) at **$0.055 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Gemini 3.6 Flash** with an MMLU score of **94.5**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Qwen: Qwen3.7 Flash** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Qwen: Qwen3.7 Flash** or **Gemini 3.6 Flash** for optimal balance between accuracy and cost."
+    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-08-16 04:32 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Qwen: Qwen3.7 Flash** (Qwen / Alibaba) with an Efficiency Score of **1530.91** (MMLU: 84.2 @ $0.055/1M tokens).\n2. **Lowest Blended Token Cost**: **Qwen: Qwen3.7 Flash** (Qwen / Alibaba) at **$0.055 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Gemini 3.6 Flash** with an MMLU score of **94.5**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Qwen: Qwen3.7 Flash** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Qwen: Qwen3.7 Flash** or **Gemini 3.6 Flash** for optimal balance between accuracy and cost."
   },
   "models": [
     {
@@ -100,11 +100,11 @@ window.FINOPS_DATA = {
       "efficiency_score": 534.0
     },
     {
-      "provider": "Google / GCP",
-      "model": "Gemini 2.5 Flash Lite",
-      "input_cost_per_1m": 0.1,
-      "output_cost_per_1m": 0.4,
-      "context_window": 1048576,
+      "provider": "Other Provider",
+      "model": "Xiaomi: MiMo-V2.5",
+      "input_cost_per_1m": 0.14,
+      "output_cost_per_1m": 0.28,
+      "context_window": 1050000,
       "region": "global",
       "mmlu_score": 86.4,
       "arena_elo": 1303,
@@ -116,11 +116,11 @@ window.FINOPS_DATA = {
       "efficiency_score": 493.71
     },
     {
-      "provider": "Other Provider",
-      "model": "Xiaomi: MiMo-V2.5",
-      "input_cost_per_1m": 0.14,
-      "output_cost_per_1m": 0.28,
-      "context_window": 1050000,
+      "provider": "Google / GCP",
+      "model": "Gemini 2.5 Flash Lite",
+      "input_cost_per_1m": 0.1,
+      "output_cost_per_1m": 0.4,
+      "context_window": 1048576,
       "region": "global",
       "mmlu_score": 86.4,
       "arena_elo": 1303,
