@@ -1,22 +1,22 @@
 window.FINOPS_DATA = {
-  "generated_at": "2026-08-23T04:33:44Z",
+  "generated_at": "2026-08-24T04:41:45Z",
   "total_models_tracked": 40,
   "providers": [
-    "Mistral AI",
-    "Google / GCP",
-    "Other Provider",
-    "OpenAI / Azure",
-    "Qwen / Alibaba",
-    "Anthropic / AWS",
     "Meta AI",
-    "DeepSeek API"
+    "Anthropic / AWS",
+    "Mistral AI",
+    "OpenAI / Azure",
+    "DeepSeek API",
+    "Qwen / Alibaba",
+    "Other Provider",
+    "Google / GCP"
   ],
   "summary": {
-    "timestamp": "2026-08-23 04:33 UTC",
+    "timestamp": "2026-08-24 04:41 UTC",
     "best_efficiency": "Muse Spark 1.2 Contributor",
     "lowest_cost": "Llama 3.2 3B Instruct",
     "top_frontier": "Gemini 3.6 Flash",
-    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-08-23 04:33 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Muse Spark 1.2 Contributor** (Meta AI) with an Efficiency Score of **691.2** (MMLU: 86.4 @ $0.125/1M tokens).\n2. **Lowest Blended Token Cost**: **Llama 3.2 3B Instruct** (Meta AI) at **$0.120 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Gemini 3.6 Flash** with an MMLU score of **94.5**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Llama 3.2 3B Instruct** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Muse Spark 1.2 Contributor** or **Gemini 3.6 Flash** for optimal balance between accuracy and cost."
+    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-08-24 04:41 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Muse Spark 1.2 Contributor** (Meta AI) with an Efficiency Score of **691.2** (MMLU: 86.4 @ $0.125/1M tokens).\n2. **Lowest Blended Token Cost**: **Llama 3.2 3B Instruct** (Meta AI) at **$0.120 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Gemini 3.6 Flash** with an MMLU score of **94.5**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Llama 3.2 3B Instruct** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Muse Spark 1.2 Contributor** or **Gemini 3.6 Flash** for optimal balance between accuracy and cost."
   },
   "models": [
     {
