@@ -1,22 +1,22 @@
 window.FINOPS_DATA = {
-  "generated_at": "2026-08-25T04:36:02Z",
+  "generated_at": "2026-08-26T04:37:11Z",
   "total_models_tracked": 40,
   "providers": [
-    "Other Provider",
     "Google / GCP",
-    "OpenAI / Azure",
     "DeepSeek API",
-    "Mistral AI",
+    "Other Provider",
+    "OpenAI / Azure",
+    "Meta AI",
     "Anthropic / AWS",
-    "Qwen / Alibaba",
-    "Meta AI"
+    "Mistral AI",
+    "Qwen / Alibaba"
   ],
   "summary": {
-    "timestamp": "2026-08-25 04:36 UTC",
+    "timestamp": "2026-08-26 04:37 UTC",
     "best_efficiency": "Muse Spark 1.2 Contributor",
     "lowest_cost": "Llama 3.2 3B Instruct",
     "top_frontier": "Gemini 3.6 Flash",
-    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-08-25 04:36 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Muse Spark 1.2 Contributor** (Meta AI) with an Efficiency Score of **691.2** (MMLU: 86.4 @ $0.125/1M tokens).\n2. **Lowest Blended Token Cost**: **Llama 3.2 3B Instruct** (Meta AI) at **$0.120 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Gemini 3.6 Flash** with an MMLU score of **94.5**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Llama 3.2 3B Instruct** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Muse Spark 1.2 Contributor** or **Gemini 3.6 Flash** for optimal balance between accuracy and cost."
+    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-08-26 04:37 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Muse Spark 1.2 Contributor** (Meta AI) with an Efficiency Score of **691.2** (MMLU: 86.4 @ $0.125/1M tokens).\n2. **Lowest Blended Token Cost**: **Llama 3.2 3B Instruct** (Meta AI) at **$0.120 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Gemini 3.6 Flash** with an MMLU score of **94.5**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Llama 3.2 3B Instruct** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Muse Spark 1.2 Contributor** or **Gemini 3.6 Flash** for optimal balance between accuracy and cost."
   },
   "models": [
     {
@@ -54,34 +54,18 @@ window.FINOPS_DATA = {
     {
       "provider": "Meta AI",
       "model": "Llama 4 Scout",
-      "input_cost_per_1m": 0.1,
-      "output_cost_per_1m": 0.3,
+      "input_cost_per_1m": 0.11,
+      "output_cost_per_1m": 0.34,
       "context_window": 1310720,
       "region": "global",
       "mmlu_score": 88.5,
       "arena_elo": 1306,
       "avg_throughput_tps": 80.0,
       "category": "API AI Model",
-      "blended_cost_per_1m": 0.15,
-      "tokens_per_dollar": 6666666,
-      "tokens_per_dollar_formatted": "6,666,666",
-      "efficiency_score": 590.0
-    },
-    {
-      "provider": "Meta AI",
-      "model": "Llama 3.3 70B Instruct",
-      "input_cost_per_1m": 0.1,
-      "output_cost_per_1m": 0.32,
-      "context_window": 131072,
-      "region": "global",
-      "mmlu_score": 86.0,
-      "arena_elo": 1265,
-      "avg_throughput_tps": 90.0,
-      "category": "Open Weights Leader",
-      "blended_cost_per_1m": 0.155,
-      "tokens_per_dollar": 6451612,
-      "tokens_per_dollar_formatted": "6,451,612",
-      "efficiency_score": 554.84
+      "blended_cost_per_1m": 0.1675,
+      "tokens_per_dollar": 5970149,
+      "tokens_per_dollar_formatted": "5,970,149",
+      "efficiency_score": 528.36
     },
     {
       "provider": "Other Provider",
@@ -120,16 +104,16 @@ window.FINOPS_DATA = {
       "model": "Llama Guard 4 12B",
       "input_cost_per_1m": 0.18,
       "output_cost_per_1m": 0.18,
-      "context_window": 1048576,
+      "context_window": 163840,
       "region": "global",
-      "mmlu_score": 86.4,
-      "arena_elo": 1303,
+      "mmlu_score": 79.3,
+      "arena_elo": 1295,
       "avg_throughput_tps": 80.0,
       "category": "API AI Model",
       "blended_cost_per_1m": 0.18,
       "tokens_per_dollar": 5555555,
       "tokens_per_dollar_formatted": "5,555,555",
-      "efficiency_score": 480.0
+      "efficiency_score": 440.56
     },
     {
       "provider": "Mistral AI",
@@ -276,6 +260,22 @@ window.FINOPS_DATA = {
       "efficiency_score": 123.92
     },
     {
+      "provider": "Meta AI",
+      "model": "Llama 3.3 70B Instruct",
+      "input_cost_per_1m": 0.71,
+      "output_cost_per_1m": 0.71,
+      "context_window": 131072,
+      "region": "global",
+      "mmlu_score": 86.0,
+      "arena_elo": 1265,
+      "avg_throughput_tps": 90.0,
+      "category": "Open Weights Leader",
+      "blended_cost_per_1m": 0.71,
+      "tokens_per_dollar": 1408450,
+      "tokens_per_dollar_formatted": "1,408,450",
+      "efficiency_score": 121.13
+    },
+    {
       "provider": "Qwen / Alibaba",
       "model": "Qwen2.5 Coder 32B Instruct",
       "input_cost_per_1m": 0.66,
@@ -358,18 +358,18 @@ window.FINOPS_DATA = {
     {
       "provider": "Qwen / Alibaba",
       "model": "Qwen: Qwen3.8 27B",
-      "input_cost_per_1m": 0.4,
-      "output_cost_per_1m": 3.0,
+      "input_cost_per_1m": 0.425,
+      "output_cost_per_1m": 2.55,
       "context_window": 1000000,
       "region": "global",
       "mmlu_score": 84.2,
       "arena_elo": 1250,
       "avg_throughput_tps": 105.0,
       "category": "Coding Specialist",
-      "blended_cost_per_1m": 1.05,
-      "tokens_per_dollar": 952380,
-      "tokens_per_dollar_formatted": "952,380",
-      "efficiency_score": 80.19
+      "blended_cost_per_1m": 0.9562,
+      "tokens_per_dollar": 1045806,
+      "tokens_per_dollar_formatted": "1,045,806",
+      "efficiency_score": 88.06
     },
     {
       "provider": "Meta AI",
