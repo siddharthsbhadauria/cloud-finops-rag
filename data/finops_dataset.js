@@ -1,22 +1,22 @@
 window.FINOPS_DATA = {
-  "generated_at": "2026-08-29T10:44:02Z",
+  "generated_at": "2026-08-30T09:43:26Z",
   "total_models_tracked": 40,
   "providers": [
-    "DeepSeek API",
-    "OpenAI / Azure",
-    "Qwen / Alibaba",
+    "Mistral AI",
     "Google / GCP",
+    "DeepSeek API",
     "Other Provider",
     "Meta AI",
-    "Mistral AI",
-    "Anthropic / AWS"
+    "OpenAI / Azure",
+    "Anthropic / AWS",
+    "Qwen / Alibaba"
   ],
   "summary": {
-    "timestamp": "2026-08-29 10:44 UTC",
+    "timestamp": "2026-08-30 09:43 UTC",
     "best_efficiency": "Poolside: Laguna S 2.1",
     "lowest_cost": "Poolside: Laguna S 2.1",
     "top_frontier": "Gemini 3.6 Flash",
-    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-08-29 10:44 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Poolside: Laguna S 2.1** (Other Provider) with an Efficiency Score of **768.0** (MMLU: 86.4 @ $0.113/1M tokens).\n2. **Lowest Blended Token Cost**: **Poolside: Laguna S 2.1** (Other Provider) at **$0.113 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Gemini 3.6 Flash** with an MMLU score of **94.5**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Poolside: Laguna S 2.1** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Poolside: Laguna S 2.1** or **Gemini 3.6 Flash** for optimal balance between accuracy and cost."
+    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-08-30 09:43 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Poolside: Laguna S 2.1** (Other Provider) with an Efficiency Score of **768.0** (MMLU: 86.4 @ $0.113/1M tokens).\n2. **Lowest Blended Token Cost**: **Poolside: Laguna S 2.1** (Other Provider) at **$0.113 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Gemini 3.6 Flash** with an MMLU score of **94.5**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Poolside: Laguna S 2.1** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Poolside: Laguna S 2.1** or **Gemini 3.6 Flash** for optimal balance between accuracy and cost."
   },
   "models": [
     {
@@ -422,7 +422,7 @@ window.FINOPS_DATA = {
     {
       "provider": "Other Provider",
       "model": "Thinking Machines: Inkling",
-      "input_cost_per_1m": 0.95,
+      "input_cost_per_1m": 1.0,
       "output_cost_per_1m": 4.05,
       "context_window": 1048576,
       "region": "global",
@@ -430,10 +430,10 @@ window.FINOPS_DATA = {
       "arena_elo": 1303,
       "avg_throughput_tps": 80.0,
       "category": "API AI Model",
-      "blended_cost_per_1m": 1.725,
-      "tokens_per_dollar": 579710,
-      "tokens_per_dollar_formatted": "579,710",
-      "efficiency_score": 50.09
+      "blended_cost_per_1m": 1.7625,
+      "tokens_per_dollar": 567375,
+      "tokens_per_dollar_formatted": "567,375",
+      "efficiency_score": 49.02
     },
     {
       "provider": "OpenAI / Azure",
@@ -470,18 +470,18 @@ window.FINOPS_DATA = {
     {
       "provider": "Other Provider",
       "model": "Z.ai: GLM Latest",
-      "input_cost_per_1m": 1.2,
-      "output_cost_per_1m": 4.0,
+      "input_cost_per_1m": 1.1875,
+      "output_cost_per_1m": 4.18,
       "context_window": 1310720,
       "region": "global",
       "mmlu_score": 88.5,
       "arena_elo": 1306,
       "avg_throughput_tps": 80.0,
       "category": "API AI Model",
-      "blended_cost_per_1m": 1.9,
-      "tokens_per_dollar": 526315,
-      "tokens_per_dollar_formatted": "526,315",
-      "efficiency_score": 46.58
+      "blended_cost_per_1m": 1.9356,
+      "tokens_per_dollar": 516635,
+      "tokens_per_dollar_formatted": "516,635",
+      "efficiency_score": 45.72
     },
     {
       "provider": "Meta AI",
