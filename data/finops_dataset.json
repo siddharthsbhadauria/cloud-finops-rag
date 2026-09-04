@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-09-03T08:31:59Z",
+  "generated_at": "2026-09-04T08:27:25Z",
   "total_models_tracked": 40,
   "providers": [
-    "Anthropic / AWS",
-    "Meta AI",
-    "OpenAI / Azure",
-    "Other Provider",
-    "Mistral AI",
-    "Qwen / Alibaba",
     "Google / GCP",
-    "DeepSeek API"
+    "Other Provider",
+    "OpenAI / Azure",
+    "Meta AI",
+    "Mistral AI",
+    "DeepSeek API",
+    "Qwen / Alibaba",
+    "Anthropic / AWS"
   ],
   "summary": {
-    "timestamp": "2026-09-03 08:31 UTC",
+    "timestamp": "2026-09-04 08:27 UTC",
     "best_efficiency": "Z.ai: GLM Flash Latest",
     "lowest_cost": "Z.ai: GLM Flash Latest",
     "top_frontier": "Gemini 3.6 Flash",
-    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-09-03 08:31 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Z.ai: GLM Flash Latest** (Other Provider) with an Efficiency Score of **745.58** (MMLU: 88.5 @ $0.119/1M tokens).\n2. **Lowest Blended Token Cost**: **Z.ai: GLM Flash Latest** (Other Provider) at **$0.119 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Gemini 3.6 Flash** with an MMLU score of **94.5**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Z.ai: GLM Flash Latest** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Z.ai: GLM Flash Latest** or **Gemini 3.6 Flash** for optimal balance between accuracy and cost."
+    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-09-04 08:27 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Z.ai: GLM Flash Latest** (Other Provider) with an Efficiency Score of **745.58** (MMLU: 88.5 @ $0.119/1M tokens).\n2. **Lowest Blended Token Cost**: **Z.ai: GLM Flash Latest** (Other Provider) at **$0.119 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Gemini 3.6 Flash** with an MMLU score of **94.5**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Z.ai: GLM Flash Latest** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Z.ai: GLM Flash Latest** or **Gemini 3.6 Flash** for optimal balance between accuracy and cost."
   },
   "models": [
     {
@@ -261,22 +261,6 @@
     },
     {
       "provider": "DeepSeek API",
-      "model": "DeepSeek V3.1",
-      "input_cost_per_1m": 0.25,
-      "output_cost_per_1m": 0.95,
-      "context_window": 163840,
-      "region": "global",
-      "mmlu_score": 79.3,
-      "arena_elo": 1295,
-      "avg_throughput_tps": 80.0,
-      "category": "API AI Model",
-      "blended_cost_per_1m": 0.425,
-      "tokens_per_dollar": 2352941,
-      "tokens_per_dollar_formatted": "2,352,941",
-      "efficiency_score": 186.59
-    },
-    {
-      "provider": "DeepSeek API",
       "model": "DeepSeek V3.1 Terminus",
       "input_cost_per_1m": 0.27,
       "output_cost_per_1m": 1.0,
@@ -372,20 +356,36 @@
       "efficiency_score": 100.12
     },
     {
+      "provider": "DeepSeek API",
+      "model": "DeepSeek V3.1",
+      "input_cost_per_1m": 0.55,
+      "output_cost_per_1m": 1.65,
+      "context_window": 163840,
+      "region": "global",
+      "mmlu_score": 79.3,
+      "arena_elo": 1295,
+      "avg_throughput_tps": 80.0,
+      "category": "API AI Model",
+      "blended_cost_per_1m": 0.825,
+      "tokens_per_dollar": 1212121,
+      "tokens_per_dollar_formatted": "1,212,121",
+      "efficiency_score": 96.12
+    },
+    {
       "provider": "Qwen / Alibaba",
       "model": "Qwen: Qwen3.8 27B",
-      "input_cost_per_1m": 0.425,
-      "output_cost_per_1m": 2.55,
+      "input_cost_per_1m": 0.42,
+      "output_cost_per_1m": 3.0,
       "context_window": 1000000,
       "region": "global",
       "mmlu_score": 84.2,
       "arena_elo": 1250,
       "avg_throughput_tps": 105.0,
       "category": "Coding Specialist",
-      "blended_cost_per_1m": 0.9562,
-      "tokens_per_dollar": 1045806,
-      "tokens_per_dollar_formatted": "1,045,806",
-      "efficiency_score": 88.06
+      "blended_cost_per_1m": 1.065,
+      "tokens_per_dollar": 938967,
+      "tokens_per_dollar_formatted": "938,967",
+      "efficiency_score": 79.06
     },
     {
       "provider": "Google / GCP",
