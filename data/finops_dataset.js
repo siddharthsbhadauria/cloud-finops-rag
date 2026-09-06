@@ -1,22 +1,22 @@
 window.FINOPS_DATA = {
-  "generated_at": "2026-09-05T08:01:46Z",
+  "generated_at": "2026-09-06T08:20:55Z",
   "total_models_tracked": 40,
   "providers": [
-    "OpenAI / Azure",
-    "DeepSeek API",
-    "Meta AI",
-    "Qwen / Alibaba",
-    "Mistral AI",
-    "Google / GCP",
     "Other Provider",
-    "Anthropic / AWS"
+    "Anthropic / AWS",
+    "Mistral AI",
+    "Meta AI",
+    "OpenAI / Azure",
+    "Google / GCP",
+    "DeepSeek API",
+    "Qwen / Alibaba"
   ],
   "summary": {
-    "timestamp": "2026-09-05 08:01 UTC",
+    "timestamp": "2026-09-06 08:20 UTC",
     "best_efficiency": "Z.ai: GLM Flash Latest",
     "lowest_cost": "Z.ai: GLM Flash Latest",
     "top_frontier": "Gemini 3.6 Flash",
-    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-09-05 08:01 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Z.ai: GLM Flash Latest** (Other Provider) with an Efficiency Score of **745.58** (MMLU: 88.5 @ $0.119/1M tokens).\n2. **Lowest Blended Token Cost**: **Z.ai: GLM Flash Latest** (Other Provider) at **$0.119 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Gemini 3.6 Flash** with an MMLU score of **94.5**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Z.ai: GLM Flash Latest** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Z.ai: GLM Flash Latest** or **Gemini 3.6 Flash** for optimal balance between accuracy and cost."
+    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-09-06 08:20 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Z.ai: GLM Flash Latest** (Other Provider) with an Efficiency Score of **745.58** (MMLU: 88.5 @ $0.119/1M tokens).\n2. **Lowest Blended Token Cost**: **Z.ai: GLM Flash Latest** (Other Provider) at **$0.119 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Gemini 3.6 Flash** with an MMLU score of **94.5**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Z.ai: GLM Flash Latest** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Z.ai: GLM Flash Latest** or **Gemini 3.6 Flash** for optimal balance between accuracy and cost."
   },
   "models": [
     {
