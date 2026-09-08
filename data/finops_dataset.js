@@ -1,22 +1,22 @@
 window.FINOPS_DATA = {
-  "generated_at": "2026-09-07T08:53:52Z",
+  "generated_at": "2026-09-08T08:37:29Z",
   "total_models_tracked": 40,
   "providers": [
-    "DeepSeek API",
     "Google / GCP",
-    "Qwen / Alibaba",
-    "Other Provider",
+    "DeepSeek API",
     "Meta AI",
     "Mistral AI",
+    "Qwen / Alibaba",
     "Anthropic / AWS",
-    "OpenAI / Azure"
+    "OpenAI / Azure",
+    "Other Provider"
   ],
   "summary": {
-    "timestamp": "2026-09-07 08:53 UTC",
+    "timestamp": "2026-09-08 08:37 UTC",
     "best_efficiency": "Z.ai: GLM Flash Latest",
     "lowest_cost": "Z.ai: GLM Flash Latest",
     "top_frontier": "Gemini 3.6 Flash",
-    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-09-07 08:53 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Z.ai: GLM Flash Latest** (Other Provider) with an Efficiency Score of **783.88** (MMLU: 88.5 @ $0.113/1M tokens).\n2. **Lowest Blended Token Cost**: **Z.ai: GLM Flash Latest** (Other Provider) at **$0.113 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Gemini 3.6 Flash** with an MMLU score of **94.5**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Z.ai: GLM Flash Latest** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Z.ai: GLM Flash Latest** or **Gemini 3.6 Flash** for optimal balance between accuracy and cost."
+    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-09-08 08:37 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Z.ai: GLM Flash Latest** (Other Provider) with an Efficiency Score of **783.88** (MMLU: 88.5 @ $0.113/1M tokens).\n2. **Lowest Blended Token Cost**: **Z.ai: GLM Flash Latest** (Other Provider) at **$0.113 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Gemini 3.6 Flash** with an MMLU score of **94.5**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Z.ai: GLM Flash Latest** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Z.ai: GLM Flash Latest** or **Gemini 3.6 Flash** for optimal balance between accuracy and cost."
   },
   "models": [
     {
@@ -229,6 +229,22 @@ window.FINOPS_DATA = {
     },
     {
       "provider": "DeepSeek API",
+      "model": "DeepSeek V3.1",
+      "input_cost_per_1m": 0.25,
+      "output_cost_per_1m": 0.95,
+      "context_window": 163840,
+      "region": "global",
+      "mmlu_score": 79.3,
+      "arena_elo": 1295,
+      "avg_throughput_tps": 80.0,
+      "category": "API AI Model",
+      "blended_cost_per_1m": 0.425,
+      "tokens_per_dollar": 2352941,
+      "tokens_per_dollar_formatted": "2,352,941",
+      "efficiency_score": 186.59
+    },
+    {
+      "provider": "DeepSeek API",
       "model": "DeepSeek V3.1 Terminus",
       "input_cost_per_1m": 0.27,
       "output_cost_per_1m": 1.0,
@@ -290,22 +306,6 @@ window.FINOPS_DATA = {
       "tokens_per_dollar": 1250000,
       "tokens_per_dollar_formatted": "1,250,000",
       "efficiency_score": 100.12
-    },
-    {
-      "provider": "DeepSeek API",
-      "model": "DeepSeek V3.1",
-      "input_cost_per_1m": 0.55,
-      "output_cost_per_1m": 1.65,
-      "context_window": 163840,
-      "region": "global",
-      "mmlu_score": 79.3,
-      "arena_elo": 1295,
-      "avg_throughput_tps": 80.0,
-      "category": "API AI Model",
-      "blended_cost_per_1m": 0.825,
-      "tokens_per_dollar": 1212121,
-      "tokens_per_dollar_formatted": "1,212,121",
-      "efficiency_score": 96.12
     },
     {
       "provider": "Google / GCP",
