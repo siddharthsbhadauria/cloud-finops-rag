@@ -15,8 +15,8 @@ from src.rag.vector_finops import VectorFinOpsEngine
 def run_pipeline():
     print("[INFO] Starting Cloud-FinOps-RAG Data Pipeline Execution...")
 
-    # 1. Dynamic API Ingestion across all providers (Google, Anthropic, OpenAI, DeepSeek, Meta, Qwen)
-    pricing_data = CloudPricingIngestor().get_all_llm_pricing(top_n=40)
+    # 1. Dynamic API Ingestion across all providers (Google, Anthropic, OpenAI, DeepSeek, Meta, Qwen, xAI, Mistral)
+    pricing_data = CloudPricingIngestor().get_all_llm_pricing(top_n=60)
     evals_data = LLMEvalsIngestor().get_benchmarks_for_models(pricing_data)
 
     # 2. Data Quality Contracts Gate
