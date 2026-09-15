@@ -1,39 +1,39 @@
 window.FINOPS_DATA = {
-  "generated_at": "2026-09-14T09:32:05Z",
+  "generated_at": "2026-09-15T09:11:02Z",
   "total_models_tracked": 60,
   "providers": [
-    "Mistral AI",
-    "Anthropic / AWS",
-    "OpenAI / Azure",
-    "Google / GCP",
-    "DeepSeek API",
     "Qwen / Alibaba",
+    "OpenAI / Azure",
     "Meta AI",
-    "xAI / Grok"
+    "DeepSeek API",
+    "Google / GCP",
+    "xAI / Grok",
+    "Anthropic / AWS",
+    "Mistral AI"
   ],
   "summary": {
-    "timestamp": "2026-09-14 09:32 UTC",
+    "timestamp": "2026-09-15 09:11 UTC",
     "best_efficiency": "DeepSeek V4 Flash Latest",
     "lowest_cost": "DeepSeek V4 Flash Latest",
     "top_frontier": "Claude Fable 5.1",
-    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-09-14 09:32 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **DeepSeek V4 Flash Latest** (DeepSeek API) with an Efficiency Score of **1714.02** (MMLU: 90.5 @ $0.053/1M tokens).\n2. **Lowest Blended Token Cost**: **DeepSeek V4 Flash Latest** (DeepSeek API) at **$0.053 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Claude Fable 5.1** with an MMLU score of **96.8**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **DeepSeek V4 Flash Latest** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **DeepSeek V4 Flash Latest** or **Claude Fable 5.1** for optimal balance between accuracy and cost."
+    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-09-15 09:11 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **DeepSeek V4 Flash Latest** (DeepSeek API) with an Efficiency Score of **1645.45** (MMLU: 90.5 @ $0.055/1M tokens).\n2. **Lowest Blended Token Cost**: **DeepSeek V4 Flash Latest** (DeepSeek API) at **$0.055 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Claude Fable 5.1** with an MMLU score of **96.8**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **DeepSeek V4 Flash Latest** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **DeepSeek V4 Flash Latest** or **Claude Fable 5.1** for optimal balance between accuracy and cost."
   },
   "models": [
     {
       "provider": "DeepSeek API",
       "model": "DeepSeek V4 Flash Latest",
-      "input_cost_per_1m": 0.0352,
-      "output_cost_per_1m": 0.1056,
+      "input_cost_per_1m": 0.04,
+      "output_cost_per_1m": 0.1,
       "context_window": 1310720,
       "region": "global",
       "mmlu_score": 90.5,
       "arena_elo": 1315,
       "avg_throughput_tps": 165.0,
       "category": "Ultra Low Cost High Speed",
-      "blended_cost_per_1m": 0.0528,
-      "tokens_per_dollar": 18939393,
-      "tokens_per_dollar_formatted": "18,939,393",
-      "efficiency_score": 1714.02
+      "blended_cost_per_1m": 0.055,
+      "tokens_per_dollar": 18181818,
+      "tokens_per_dollar_formatted": "18,181,818",
+      "efficiency_score": 1645.45
     },
     {
       "provider": "Qwen / Alibaba",
@@ -182,18 +182,50 @@ window.FINOPS_DATA = {
     {
       "provider": "Meta AI",
       "model": "Llama 4 Maverick",
-      "input_cost_per_1m": 0.2,
-      "output_cost_per_1m": 0.696,
+      "input_cost_per_1m": 0.1875,
+      "output_cost_per_1m": 0.6525,
       "context_window": 1048576,
       "region": "global",
       "mmlu_score": 92.4,
       "arena_elo": 1345,
       "avg_throughput_tps": 110.0,
       "category": "Open Weights Frontier",
-      "blended_cost_per_1m": 0.324,
-      "tokens_per_dollar": 3086419,
-      "tokens_per_dollar_formatted": "3,086,419",
-      "efficiency_score": 285.19
+      "blended_cost_per_1m": 0.3037,
+      "tokens_per_dollar": 3292723,
+      "tokens_per_dollar_formatted": "3,292,723",
+      "efficiency_score": 304.25
+    },
+    {
+      "provider": "DeepSeek API",
+      "model": "DeepSeek V3.2",
+      "input_cost_per_1m": 0.269,
+      "output_cost_per_1m": 0.4,
+      "context_window": 163840,
+      "region": "global",
+      "mmlu_score": 89.8,
+      "arena_elo": 1298,
+      "avg_throughput_tps": 100.0,
+      "category": "Cost Efficiency Leader",
+      "blended_cost_per_1m": 0.3018,
+      "tokens_per_dollar": 3313452,
+      "tokens_per_dollar_formatted": "3,313,452",
+      "efficiency_score": 297.55
+    },
+    {
+      "provider": "DeepSeek API",
+      "model": "DeepSeek V3.2 Exp",
+      "input_cost_per_1m": 0.27,
+      "output_cost_per_1m": 0.41,
+      "context_window": 163840,
+      "region": "global",
+      "mmlu_score": 89.8,
+      "arena_elo": 1298,
+      "avg_throughput_tps": 100.0,
+      "category": "Cost Efficiency Leader",
+      "blended_cost_per_1m": 0.305,
+      "tokens_per_dollar": 3278688,
+      "tokens_per_dollar_formatted": "3,278,688",
+      "efficiency_score": 294.43
     },
     {
       "provider": "DeepSeek API",
@@ -388,6 +420,38 @@ window.FINOPS_DATA = {
       "efficiency_score": 108.24
     },
     {
+      "provider": "DeepSeek API",
+      "model": "R1 0528",
+      "input_cost_per_1m": 0.5,
+      "output_cost_per_1m": 2.15,
+      "context_window": 163840,
+      "region": "global",
+      "mmlu_score": 90.8,
+      "arena_elo": 1310,
+      "avg_throughput_tps": 48.0,
+      "category": "Open Reasoning Leader",
+      "blended_cost_per_1m": 0.9125,
+      "tokens_per_dollar": 1095890,
+      "tokens_per_dollar_formatted": "1,095,890",
+      "efficiency_score": 99.51
+    },
+    {
+      "provider": "DeepSeek API",
+      "model": "R1",
+      "input_cost_per_1m": 0.7,
+      "output_cost_per_1m": 2.5,
+      "context_window": 64000,
+      "region": "global",
+      "mmlu_score": 90.8,
+      "arena_elo": 1310,
+      "avg_throughput_tps": 48.0,
+      "category": "Open Reasoning Leader",
+      "blended_cost_per_1m": 1.15,
+      "tokens_per_dollar": 869565,
+      "tokens_per_dollar_formatted": "869,565",
+      "efficiency_score": 78.96
+    },
+    {
       "provider": "xAI / Grok",
       "model": "Grok Build 0.1",
       "input_cost_per_1m": 1.0,
@@ -514,22 +578,6 @@ window.FINOPS_DATA = {
       "tokens_per_dollar": 640000,
       "tokens_per_dollar_formatted": "640,000",
       "efficiency_score": 58.11
-    },
-    {
-      "provider": "OpenAI / Azure",
-      "model": "o3 Mini High",
-      "input_cost_per_1m": 1.1,
-      "output_cost_per_1m": 4.4,
-      "context_window": 200000,
-      "region": "global",
-      "mmlu_score": 91.5,
-      "arena_elo": 1318,
-      "avg_throughput_tps": 115.0,
-      "category": "Reasoning Leader",
-      "blended_cost_per_1m": 1.925,
-      "tokens_per_dollar": 519480,
-      "tokens_per_dollar_formatted": "519,480",
-      "efficiency_score": 47.53
     },
     {
       "provider": "DeepSeek API",
@@ -724,22 +772,6 @@ window.FINOPS_DATA = {
       "efficiency_score": 27.26
     },
     {
-      "provider": "OpenAI / Azure",
-      "model": "o3",
-      "input_cost_per_1m": 2.0,
-      "output_cost_per_1m": 8.0,
-      "context_window": 200000,
-      "region": "global",
-      "mmlu_score": 92.8,
-      "arena_elo": 1345,
-      "avg_throughput_tps": 85.0,
-      "category": "Advanced Reasoning Leader",
-      "blended_cost_per_1m": 3.5,
-      "tokens_per_dollar": 285714,
-      "tokens_per_dollar_formatted": "285,714",
-      "efficiency_score": 26.51
-    },
-    {
       "provider": "Anthropic / AWS",
       "model": "Claude Sonnet 5",
       "input_cost_per_1m": 2.0,
@@ -932,22 +964,6 @@ window.FINOPS_DATA = {
       "efficiency_score": 4.82
     },
     {
-      "provider": "OpenAI / Azure",
-      "model": "GPT-6 Astra Pro",
-      "input_cost_per_1m": 10.0,
-      "output_cost_per_1m": 50.0,
-      "context_window": 1050000,
-      "region": "global",
-      "mmlu_score": 96.4,
-      "arena_elo": 1412,
-      "avg_throughput_tps": 65.0,
-      "category": "Frontier State-of-the-Art Leader",
-      "blended_cost_per_1m": 20.0,
-      "tokens_per_dollar": 50000,
-      "tokens_per_dollar_formatted": "50,000",
-      "efficiency_score": 4.82
-    },
-    {
       "provider": "Anthropic / AWS",
       "model": "Claude Fable 5",
       "input_cost_per_1m": 10.0,
@@ -962,22 +978,6 @@ window.FINOPS_DATA = {
       "tokens_per_dollar": 50000,
       "tokens_per_dollar_formatted": "50,000",
       "efficiency_score": 4.79
-    },
-    {
-      "provider": "OpenAI / Azure",
-      "model": "o3 Pro",
-      "input_cost_per_1m": 20.0,
-      "output_cost_per_1m": 80.0,
-      "context_window": 200000,
-      "region": "global",
-      "mmlu_score": 92.8,
-      "arena_elo": 1345,
-      "avg_throughput_tps": 85.0,
-      "category": "Advanced Reasoning Leader",
-      "blended_cost_per_1m": 35.0,
-      "tokens_per_dollar": 28571,
-      "tokens_per_dollar_formatted": "28,571",
-      "efficiency_score": 2.65
     }
   ]
 };
