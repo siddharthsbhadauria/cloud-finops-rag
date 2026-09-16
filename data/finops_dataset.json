@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-09-15T09:11:02Z",
+  "generated_at": "2026-09-16T09:02:57Z",
   "total_models_tracked": 60,
   "providers": [
-    "Qwen / Alibaba",
     "OpenAI / Azure",
-    "Meta AI",
-    "DeepSeek API",
-    "Google / GCP",
-    "xAI / Grok",
+    "Qwen / Alibaba",
     "Anthropic / AWS",
-    "Mistral AI"
+    "DeepSeek API",
+    "xAI / Grok",
+    "Mistral AI",
+    "Google / GCP",
+    "Meta AI"
   ],
   "summary": {
-    "timestamp": "2026-09-15 09:11 UTC",
+    "timestamp": "2026-09-16 09:02 UTC",
     "best_efficiency": "DeepSeek V4 Flash Latest",
     "lowest_cost": "DeepSeek V4 Flash Latest",
     "top_frontier": "Claude Fable 5.1",
-    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-09-15 09:11 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **DeepSeek V4 Flash Latest** (DeepSeek API) with an Efficiency Score of **1645.45** (MMLU: 90.5 @ $0.055/1M tokens).\n2. **Lowest Blended Token Cost**: **DeepSeek V4 Flash Latest** (DeepSeek API) at **$0.055 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Claude Fable 5.1** with an MMLU score of **96.8**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **DeepSeek V4 Flash Latest** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **DeepSeek V4 Flash Latest** or **Claude Fable 5.1** for optimal balance between accuracy and cost."
+    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-09-16 09:02 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **DeepSeek V4 Flash Latest** (DeepSeek API) with an Efficiency Score of **1645.45** (MMLU: 90.5 @ $0.055/1M tokens).\n2. **Lowest Blended Token Cost**: **DeepSeek V4 Flash Latest** (DeepSeek API) at **$0.055 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Claude Fable 5.1** with an MMLU score of **96.8**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **DeepSeek V4 Flash Latest** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **DeepSeek V4 Flash Latest** or **Claude Fable 5.1** for optimal balance between accuracy and cost."
   },
   "models": [
     {
