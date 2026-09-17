@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-09-16T09:02:57Z",
+  "generated_at": "2026-09-17T09:10:25Z",
   "total_models_tracked": 60,
   "providers": [
-    "OpenAI / Azure",
-    "Qwen / Alibaba",
-    "Anthropic / AWS",
+    "Meta AI",
     "DeepSeek API",
     "xAI / Grok",
-    "Mistral AI",
+    "Anthropic / AWS",
     "Google / GCP",
-    "Meta AI"
+    "Qwen / Alibaba",
+    "Mistral AI",
+    "OpenAI / Azure"
   ],
   "summary": {
-    "timestamp": "2026-09-16 09:02 UTC",
+    "timestamp": "2026-09-17 09:10 UTC",
     "best_efficiency": "DeepSeek V4 Flash Latest",
     "lowest_cost": "DeepSeek V4 Flash Latest",
     "top_frontier": "Claude Fable 5.1",
-    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-09-16 09:02 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **DeepSeek V4 Flash Latest** (DeepSeek API) with an Efficiency Score of **1645.45** (MMLU: 90.5 @ $0.055/1M tokens).\n2. **Lowest Blended Token Cost**: **DeepSeek V4 Flash Latest** (DeepSeek API) at **$0.055 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Claude Fable 5.1** with an MMLU score of **96.8**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **DeepSeek V4 Flash Latest** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **DeepSeek V4 Flash Latest** or **Claude Fable 5.1** for optimal balance between accuracy and cost."
+    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-09-17 09:10 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **DeepSeek V4 Flash Latest** (DeepSeek API) with an Efficiency Score of **1645.45** (MMLU: 90.5 @ $0.055/1M tokens).\n2. **Lowest Blended Token Cost**: **DeepSeek V4 Flash Latest** (DeepSeek API) at **$0.055 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Claude Fable 5.1** with an MMLU score of **96.8**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **DeepSeek V4 Flash Latest** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **DeepSeek V4 Flash Latest** or **Claude Fable 5.1** for optimal balance between accuracy and cost."
   },
   "models": [
     {
       "provider": "DeepSeek API",
       "model": "DeepSeek V4 Flash Latest",
-      "input_cost_per_1m": 0.04,
-      "output_cost_per_1m": 0.1,
+      "input_cost_per_1m": 0.03,
+      "output_cost_per_1m": 0.13,
       "context_window": 1310720,
       "region": "global",
       "mmlu_score": 90.5,
@@ -484,22 +484,6 @@
       "efficiency_score": 63.6
     },
     {
-      "provider": "DeepSeek API",
-      "model": "DeepSeek V4 Pro 0813",
-      "input_cost_per_1m": 0.9834,
-      "output_cost_per_1m": 2.9502,
-      "context_window": 1048576,
-      "region": "global",
-      "mmlu_score": 93.2,
-      "arena_elo": 1355,
-      "avg_throughput_tps": 90.0,
-      "category": "Next-Gen Open Reasoning Leader",
-      "blended_cost_per_1m": 1.4751,
-      "tokens_per_dollar": 677920,
-      "tokens_per_dollar_formatted": "677,920",
-      "efficiency_score": 63.18
-    },
-    {
       "provider": "Google / GCP",
       "model": "Gemini 3.7 Flash",
       "input_cost_per_1m": 0.75,
@@ -578,6 +562,22 @@
       "tokens_per_dollar": 640000,
       "tokens_per_dollar_formatted": "640,000",
       "efficiency_score": 58.11
+    },
+    {
+      "provider": "DeepSeek API",
+      "model": "DeepSeek V4 Pro 0813",
+      "input_cost_per_1m": 1.32,
+      "output_cost_per_1m": 3.96,
+      "context_window": 1048576,
+      "region": "global",
+      "mmlu_score": 93.2,
+      "arena_elo": 1355,
+      "avg_throughput_tps": 90.0,
+      "category": "Next-Gen Open Reasoning Leader",
+      "blended_cost_per_1m": 1.98,
+      "tokens_per_dollar": 505050,
+      "tokens_per_dollar_formatted": "505,050",
+      "efficiency_score": 47.07
     },
     {
       "provider": "DeepSeek API",
