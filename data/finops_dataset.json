@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-10-11T10:34:07Z",
+  "generated_at": "2026-10-12T11:38:32Z",
   "total_models_tracked": 60,
   "providers": [
+    "DeepSeek API",
+    "Google / GCP",
     "Meta AI",
     "OpenAI / Azure",
-    "Qwen / Alibaba",
-    "Mistral AI",
-    "xAI / Grok",
-    "Google / GCP",
     "Anthropic / AWS",
-    "DeepSeek API"
+    "Mistral AI",
+    "Qwen / Alibaba",
+    "xAI / Grok"
   ],
   "summary": {
-    "timestamp": "2026-10-11 10:34 UTC",
+    "timestamp": "2026-10-12 11:38 UTC",
     "best_efficiency": "Qwen3.7 Flash",
     "lowest_cost": "Qwen3.7 Flash",
     "top_frontier": "Claude Fable 5.1",
-    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-10-11 10:34 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Qwen3.7 Flash** (Qwen / Alibaba) with an Efficiency Score of **1609.09** (MMLU: 88.5 @ $0.055/1M tokens).\n2. **Lowest Blended Token Cost**: **Qwen3.7 Flash** (Qwen / Alibaba) at **$0.055 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Claude Fable 5.1** with an MMLU score of **96.8**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Qwen3.7 Flash** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Qwen3.7 Flash** or **Claude Fable 5.1** for optimal balance between accuracy and cost."
+    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-10-12 11:38 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Qwen3.7 Flash** (Qwen / Alibaba) with an Efficiency Score of **1609.09** (MMLU: 88.5 @ $0.055/1M tokens).\n2. **Lowest Blended Token Cost**: **Qwen3.7 Flash** (Qwen / Alibaba) at **$0.055 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Claude Fable 5.1** with an MMLU score of **96.8**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Qwen3.7 Flash** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Qwen3.7 Flash** or **Claude Fable 5.1** for optimal balance between accuracy and cost."
   },
   "models": [
     {
@@ -85,8 +85,8 @@
     },
     {
       "provider": "DeepSeek API",
-      "model": "DeepSeek V4 Flash Latest",
-      "input_cost_per_1m": 0.0161,
+      "model": "DeepSeek V4 Flash 0731",
+      "input_cost_per_1m": 0.016,
       "output_cost_per_1m": 0.64,
       "context_window": 1048576,
       "region": "global",
@@ -94,26 +94,26 @@
       "arena_elo": 1315,
       "avg_throughput_tps": 165.0,
       "category": "Ultra Low Cost High Speed",
-      "blended_cost_per_1m": 0.1721,
-      "tokens_per_dollar": 5810575,
-      "tokens_per_dollar_formatted": "5,810,575",
-      "efficiency_score": 525.86
+      "blended_cost_per_1m": 0.172,
+      "tokens_per_dollar": 5813953,
+      "tokens_per_dollar_formatted": "5,813,953",
+      "efficiency_score": 526.16
     },
     {
       "provider": "DeepSeek API",
-      "model": "DeepSeek V4 Flash 0731",
-      "input_cost_per_1m": 0.0161,
-      "output_cost_per_1m": 0.64,
+      "model": "DeepSeek V4 Flash Latest",
+      "input_cost_per_1m": 0.0128,
+      "output_cost_per_1m": 0.768,
       "context_window": 1048576,
       "region": "global",
       "mmlu_score": 90.5,
       "arena_elo": 1315,
       "avg_throughput_tps": 165.0,
       "category": "Ultra Low Cost High Speed",
-      "blended_cost_per_1m": 0.1721,
-      "tokens_per_dollar": 5810575,
-      "tokens_per_dollar_formatted": "5,810,575",
-      "efficiency_score": 525.86
+      "blended_cost_per_1m": 0.2016,
+      "tokens_per_dollar": 4960317,
+      "tokens_per_dollar_formatted": "4,960,317",
+      "efficiency_score": 448.91
     },
     {
       "provider": "Anthropic / AWS",
@@ -165,19 +165,19 @@
     },
     {
       "provider": "DeepSeek API",
-      "model": "DeepSeek V4 Pro 0423",
-      "input_cost_per_1m": 0.2088,
-      "output_cost_per_1m": 0.4176,
+      "model": "DeepSeek V4.1 Flash",
+      "input_cost_per_1m": 0.15,
+      "output_cost_per_1m": 0.6,
       "context_window": 1048576,
       "region": "global",
-      "mmlu_score": 93.2,
-      "arena_elo": 1355,
+      "mmlu_score": 92.5,
+      "arena_elo": 1345,
       "avg_throughput_tps": 90.0,
-      "category": "Next-Gen Open Reasoning Leader",
-      "blended_cost_per_1m": 0.261,
-      "tokens_per_dollar": 3831417,
-      "tokens_per_dollar_formatted": "3,831,417",
-      "efficiency_score": 357.09
+      "category": "Next-Gen Open Reasoning",
+      "blended_cost_per_1m": 0.2625,
+      "tokens_per_dollar": 3809523,
+      "tokens_per_dollar_formatted": "3,809,523",
+      "efficiency_score": 352.38
     },
     {
       "provider": "Mistral AI",
@@ -308,22 +308,6 @@
       "efficiency_score": 192.22
     },
     {
-      "provider": "DeepSeek API",
-      "model": "DeepSeek V4.1 Flash",
-      "input_cost_per_1m": 0.3,
-      "output_cost_per_1m": 1.2,
-      "context_window": 1048576,
-      "region": "global",
-      "mmlu_score": 92.5,
-      "arena_elo": 1345,
-      "avg_throughput_tps": 90.0,
-      "category": "Next-Gen Open Reasoning",
-      "blended_cost_per_1m": 0.525,
-      "tokens_per_dollar": 1904761,
-      "tokens_per_dollar_formatted": "1,904,761",
-      "efficiency_score": 176.19
-    },
-    {
       "provider": "Qwen / Alibaba",
       "model": "Qwen3.8 27B",
       "input_cost_per_1m": 0.04,
@@ -434,6 +418,22 @@
       "tokens_per_dollar": 968523,
       "tokens_per_dollar_formatted": "968,523",
       "efficiency_score": 87.17
+    },
+    {
+      "provider": "DeepSeek API",
+      "model": "DeepSeek V4 Pro 0423",
+      "input_cost_per_1m": 0.9553,
+      "output_cost_per_1m": 1.9105,
+      "context_window": 1048576,
+      "region": "global",
+      "mmlu_score": 93.2,
+      "arena_elo": 1355,
+      "avg_throughput_tps": 90.0,
+      "category": "Next-Gen Open Reasoning Leader",
+      "blended_cost_per_1m": 1.1941,
+      "tokens_per_dollar": 837450,
+      "tokens_per_dollar_formatted": "837,450",
+      "efficiency_score": 78.05
     },
     {
       "provider": "Google / GCP",
