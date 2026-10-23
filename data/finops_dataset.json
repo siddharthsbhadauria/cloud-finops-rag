@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-10-22T09:09:03Z",
+  "generated_at": "2026-10-23T09:04:34Z",
   "total_models_tracked": 60,
   "providers": [
-    "Mistral AI",
-    "OpenAI / Azure",
-    "Google / GCP",
-    "Qwen / Alibaba",
+    "DeepSeek API",
     "Anthropic / AWS",
     "Meta AI",
-    "DeepSeek API",
-    "xAI / Grok"
+    "Qwen / Alibaba",
+    "OpenAI / Azure",
+    "xAI / Grok",
+    "Google / GCP",
+    "Mistral AI"
   ],
   "summary": {
-    "timestamp": "2026-10-22 09:09 UTC",
+    "timestamp": "2026-10-23 09:04 UTC",
     "best_efficiency": "Qwen3.7 Flash",
     "lowest_cost": "Qwen3.7 Flash",
     "top_frontier": "Claude Fable 5.1",
-    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-10-22 09:09 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Qwen3.7 Flash** (Qwen / Alibaba) with an Efficiency Score of **1609.09** (MMLU: 88.5 @ $0.055/1M tokens).\n2. **Lowest Blended Token Cost**: **Qwen3.7 Flash** (Qwen / Alibaba) at **$0.055 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Claude Fable 5.1** with an MMLU score of **96.8**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Qwen3.7 Flash** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Qwen3.7 Flash** or **Claude Fable 5.1** for optimal balance between accuracy and cost."
+    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-10-23 09:04 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Qwen3.7 Flash** (Qwen / Alibaba) with an Efficiency Score of **1609.09** (MMLU: 88.5 @ $0.055/1M tokens).\n2. **Lowest Blended Token Cost**: **Qwen3.7 Flash** (Qwen / Alibaba) at **$0.055 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Claude Fable 5.1** with an MMLU score of **96.8**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Qwen3.7 Flash** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Qwen3.7 Flash** or **Claude Fable 5.1** for optimal balance between accuracy and cost."
   },
   "models": [
     {
@@ -244,22 +244,6 @@
       "efficiency_score": 279.84
     },
     {
-      "provider": "Qwen / Alibaba",
-      "model": "Qwen3.8 27B",
-      "input_cost_per_1m": 0.04,
-      "output_cost_per_1m": 1.35,
-      "context_window": 1000000,
-      "region": "global",
-      "mmlu_score": 91.0,
-      "arena_elo": 1320,
-      "avg_throughput_tps": 105.0,
-      "category": "High-Efficiency Coding Frontier",
-      "blended_cost_per_1m": 0.3675,
-      "tokens_per_dollar": 2721088,
-      "tokens_per_dollar_formatted": "2,721,088",
-      "efficiency_score": 247.62
-    },
-    {
       "provider": "OpenAI / Azure",
       "model": "GPT-5.6 Luna Pro",
       "input_cost_per_1m": 0.2,
@@ -370,6 +354,22 @@
       "tokens_per_dollar": 1333333,
       "tokens_per_dollar_formatted": "1,333,333",
       "efficiency_score": 121.07
+    },
+    {
+      "provider": "Qwen / Alibaba",
+      "model": "Qwen3.8 27B",
+      "input_cost_per_1m": 0.2,
+      "output_cost_per_1m": 2.5,
+      "context_window": 1000000,
+      "region": "global",
+      "mmlu_score": 91.0,
+      "arena_elo": 1320,
+      "avg_throughput_tps": 105.0,
+      "category": "High-Efficiency Coding Frontier",
+      "blended_cost_per_1m": 0.775,
+      "tokens_per_dollar": 1290322,
+      "tokens_per_dollar_formatted": "1,290,322",
+      "efficiency_score": 117.42
     },
     {
       "provider": "Mistral AI",
