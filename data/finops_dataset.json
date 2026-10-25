@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-10-24T08:36:58Z",
+  "generated_at": "2026-10-25T08:56:31Z",
   "total_models_tracked": 60,
   "providers": [
-    "Google / GCP",
+    "DeepSeek API",
     "Qwen / Alibaba",
     "OpenAI / Azure",
-    "Mistral AI",
-    "DeepSeek API",
     "Anthropic / AWS",
     "Meta AI",
-    "xAI / Grok"
+    "Google / GCP",
+    "xAI / Grok",
+    "Mistral AI"
   ],
   "summary": {
-    "timestamp": "2026-10-24 08:36 UTC",
+    "timestamp": "2026-10-25 08:56 UTC",
     "best_efficiency": "Qwen3.7 Flash",
     "lowest_cost": "Qwen3.7 Flash",
     "top_frontier": "Claude Fable 5.1",
-    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-10-24 08:36 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Qwen3.7 Flash** (Qwen / Alibaba) with an Efficiency Score of **1609.09** (MMLU: 88.5 @ $0.055/1M tokens).\n2. **Lowest Blended Token Cost**: **Qwen3.7 Flash** (Qwen / Alibaba) at **$0.055 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Claude Fable 5.1** with an MMLU score of **96.8**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Qwen3.7 Flash** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Qwen3.7 Flash** or **Claude Fable 5.1** for optimal balance between accuracy and cost."
+    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-10-25 08:56 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Qwen3.7 Flash** (Qwen / Alibaba) with an Efficiency Score of **1609.09** (MMLU: 88.5 @ $0.055/1M tokens).\n2. **Lowest Blended Token Cost**: **Qwen3.7 Flash** (Qwen / Alibaba) at **$0.055 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Claude Fable 5.1** with an MMLU score of **96.8**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Qwen3.7 Flash** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Qwen3.7 Flash** or **Claude Fable 5.1** for optimal balance between accuracy and cost."
   },
   "models": [
     {
@@ -37,23 +37,23 @@
     },
     {
       "provider": "DeepSeek API",
-      "model": "DeepSeek V4 Flash 0731",
-      "input_cost_per_1m": 0.0444,
-      "output_cost_per_1m": 0.1333,
+      "model": "DeepSeek V4 Flash Latest",
+      "input_cost_per_1m": 0.0422,
+      "output_cost_per_1m": 0.1694,
       "context_window": 1048576,
       "region": "global",
       "mmlu_score": 90.5,
       "arena_elo": 1315,
       "avg_throughput_tps": 165.0,
       "category": "Ultra Low Cost High Speed",
-      "blended_cost_per_1m": 0.0666,
-      "tokens_per_dollar": 15015015,
-      "tokens_per_dollar_formatted": "15,015,015",
-      "efficiency_score": 1358.86
+      "blended_cost_per_1m": 0.074,
+      "tokens_per_dollar": 13513513,
+      "tokens_per_dollar_formatted": "13,513,513",
+      "efficiency_score": 1222.97
     },
     {
       "provider": "DeepSeek API",
-      "model": "DeepSeek V4 Flash Latest",
+      "model": "DeepSeek V4 Flash 0731",
       "input_cost_per_1m": 0.0422,
       "output_cost_per_1m": 0.1694,
       "context_window": 1048576,
@@ -178,6 +178,22 @@
       "tokens_per_dollar": 4347826,
       "tokens_per_dollar_formatted": "4,347,826",
       "efficiency_score": 381.74
+    },
+    {
+      "provider": "DeepSeek API",
+      "model": "DeepSeek V4 Pro 0423",
+      "input_cost_per_1m": 0.2088,
+      "output_cost_per_1m": 0.4176,
+      "context_window": 1048576,
+      "region": "global",
+      "mmlu_score": 93.2,
+      "arena_elo": 1355,
+      "avg_throughput_tps": 90.0,
+      "category": "Next-Gen Open Reasoning Leader",
+      "blended_cost_per_1m": 0.261,
+      "tokens_per_dollar": 3831417,
+      "tokens_per_dollar_formatted": "3,831,417",
+      "efficiency_score": 357.09
     },
     {
       "provider": "DeepSeek API",
@@ -338,22 +354,6 @@
       "tokens_per_dollar": 2222222,
       "tokens_per_dollar_formatted": "2,222,222",
       "efficiency_score": 192.22
-    },
-    {
-      "provider": "DeepSeek API",
-      "model": "DeepSeek V4 Pro 0423",
-      "input_cost_per_1m": 0.4392,
-      "output_cost_per_1m": 0.8784,
-      "context_window": 1048576,
-      "region": "global",
-      "mmlu_score": 93.2,
-      "arena_elo": 1355,
-      "avg_throughput_tps": 90.0,
-      "category": "Next-Gen Open Reasoning Leader",
-      "blended_cost_per_1m": 0.549,
-      "tokens_per_dollar": 1821493,
-      "tokens_per_dollar_formatted": "1,821,493",
-      "efficiency_score": 169.76
     },
     {
       "provider": "Mistral AI",
