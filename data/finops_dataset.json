@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-11-02T11:59:28Z",
+  "generated_at": "2026-11-03T11:35:47Z",
   "total_models_tracked": 60,
   "providers": [
-    "OpenAI / Azure",
+    "Meta AI",
+    "Mistral AI",
+    "Anthropic / AWS",
     "DeepSeek API",
     "Qwen / Alibaba",
-    "Google / GCP",
-    "Meta AI",
     "xAI / Grok",
-    "Mistral AI",
-    "Anthropic / AWS"
+    "OpenAI / Azure",
+    "Google / GCP"
   ],
   "summary": {
-    "timestamp": "2026-11-02 11:59 UTC",
+    "timestamp": "2026-11-03 11:35 UTC",
     "best_efficiency": "Qwen3.7 Flash",
     "lowest_cost": "Qwen3.7 Flash",
     "top_frontier": "Claude Fable 5.1",
-    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-11-02 11:59 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Qwen3.7 Flash** (Qwen / Alibaba) with an Efficiency Score of **1609.09** (MMLU: 88.5 @ $0.055/1M tokens).\n2. **Lowest Blended Token Cost**: **Qwen3.7 Flash** (Qwen / Alibaba) at **$0.055 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Claude Fable 5.1** with an MMLU score of **96.8**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Qwen3.7 Flash** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Qwen3.7 Flash** or **Claude Fable 5.1** for optimal balance between accuracy and cost."
+    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-11-03 11:35 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Qwen3.7 Flash** (Qwen / Alibaba) with an Efficiency Score of **1609.09** (MMLU: 88.5 @ $0.055/1M tokens).\n2. **Lowest Blended Token Cost**: **Qwen3.7 Flash** (Qwen / Alibaba) at **$0.055 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Claude Fable 5.1** with an MMLU score of **96.8**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Qwen3.7 Flash** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Qwen3.7 Flash** or **Claude Fable 5.1** for optimal balance between accuracy and cost."
   },
   "models": [
     {
@@ -38,6 +38,22 @@
     {
       "provider": "DeepSeek API",
       "model": "DeepSeek V4 Flash Latest",
+      "input_cost_per_1m": 0.059,
+      "output_cost_per_1m": 0.3,
+      "context_window": 1048576,
+      "region": "global",
+      "mmlu_score": 90.5,
+      "arena_elo": 1315,
+      "avg_throughput_tps": 165.0,
+      "category": "Ultra Low Cost High Speed",
+      "blended_cost_per_1m": 0.1192,
+      "tokens_per_dollar": 8389261,
+      "tokens_per_dollar_formatted": "8,389,261",
+      "efficiency_score": 759.23
+    },
+    {
+      "provider": "DeepSeek API",
+      "model": "DeepSeek V4 Flash 0731",
       "input_cost_per_1m": 0.059,
       "output_cost_per_1m": 0.3,
       "context_window": 1048576,
@@ -84,22 +100,6 @@
       "efficiency_score": 704.0
     },
     {
-      "provider": "DeepSeek API",
-      "model": "DeepSeek V4 Flash 0731",
-      "input_cost_per_1m": 0.119,
-      "output_cost_per_1m": 0.238,
-      "context_window": 1048576,
-      "region": "global",
-      "mmlu_score": 90.5,
-      "arena_elo": 1315,
-      "avg_throughput_tps": 165.0,
-      "category": "Ultra Low Cost High Speed",
-      "blended_cost_per_1m": 0.1487,
-      "tokens_per_dollar": 6724949,
-      "tokens_per_dollar_formatted": "6,724,949",
-      "efficiency_score": 608.61
-    },
-    {
       "provider": "Meta AI",
       "model": "Llama 4 Scout",
       "input_cost_per_1m": 0.1,
@@ -130,22 +130,6 @@
       "tokens_per_dollar": 6297229,
       "tokens_per_dollar_formatted": "6,297,229",
       "efficiency_score": 582.49
-    },
-    {
-      "provider": "Meta AI",
-      "model": "Llama 3.3 70B Instruct",
-      "input_cost_per_1m": 0.1,
-      "output_cost_per_1m": 0.32,
-      "context_window": 131072,
-      "region": "global",
-      "mmlu_score": 86.0,
-      "arena_elo": 1265,
-      "avg_throughput_tps": 90.0,
-      "category": "Open Weights Leader",
-      "blended_cost_per_1m": 0.155,
-      "tokens_per_dollar": 6451612,
-      "tokens_per_dollar_formatted": "6,451,612",
-      "efficiency_score": 554.84
     },
     {
       "provider": "OpenAI / Azure",
@@ -226,6 +210,22 @@
       "tokens_per_dollar": 3809523,
       "tokens_per_dollar_formatted": "3,809,523",
       "efficiency_score": 323.05
+    },
+    {
+      "provider": "Meta AI",
+      "model": "Llama 3.3 70B Instruct",
+      "input_cost_per_1m": 0.2,
+      "output_cost_per_1m": 0.52,
+      "context_window": 131072,
+      "region": "global",
+      "mmlu_score": 86.0,
+      "arena_elo": 1265,
+      "avg_throughput_tps": 90.0,
+      "category": "Open Weights Leader",
+      "blended_cost_per_1m": 0.28,
+      "tokens_per_dollar": 3571428,
+      "tokens_per_dollar_formatted": "3,571,428",
+      "efficiency_score": 307.14
     },
     {
       "provider": "Meta AI",
