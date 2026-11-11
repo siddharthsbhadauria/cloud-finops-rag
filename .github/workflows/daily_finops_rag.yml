@@ -38,7 +38,7 @@ jobs:
           
           git add data/
           
-          if git commit -m "feat(finops): update daily multi-cloud AI tokenomics matrix [skip ci]"; then
+          if git commit -m "feat(finops): update daily multi-cloud AI tokenomics matrix"; then
             git push origin main
           else
             echo "No pipeline data changes to commit."
