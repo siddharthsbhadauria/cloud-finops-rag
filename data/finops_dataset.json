@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-11-13T11:50:46Z",
+  "generated_at": "2026-11-14T11:12:08Z",
   "total_models_tracked": 60,
   "providers": [
-    "Anthropic / AWS",
-    "OpenAI / Azure",
-    "Qwen / Alibaba",
-    "Mistral AI",
-    "xAI / Grok",
     "Meta AI",
     "Google / GCP",
-    "DeepSeek API"
+    "OpenAI / Azure",
+    "xAI / Grok",
+    "Anthropic / AWS",
+    "DeepSeek API",
+    "Qwen / Alibaba",
+    "Mistral AI"
   ],
   "summary": {
-    "timestamp": "2026-11-13 11:50 UTC",
+    "timestamp": "2026-11-14 11:12 UTC",
     "best_efficiency": "Qwen3.7 Flash",
     "lowest_cost": "Qwen3.7 Flash",
     "top_frontier": "Claude Fable 5.1",
-    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-11-13 11:50 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Qwen3.7 Flash** (Qwen / Alibaba) with an Efficiency Score of **1609.09** (MMLU: 88.5 @ $0.055/1M tokens).\n2. **Lowest Blended Token Cost**: **Qwen3.7 Flash** (Qwen / Alibaba) at **$0.055 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Claude Fable 5.1** with an MMLU score of **96.8**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Qwen3.7 Flash** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Qwen3.7 Flash** or **Claude Fable 5.1** for optimal balance between accuracy and cost."
+    "markdown_brief": "### 📊 Daily Cloud AI FinOps & Tokenomics Summary\n*Generated on 2026-11-14 11:12 UTC*\n\n#### 🏆 Key Benchmark Highlights\n1. **Best Cost-Performance Ratio**: **Qwen3.7 Flash** (Qwen / Alibaba) with an Efficiency Score of **1609.09** (MMLU: 88.5 @ $0.055/1M tokens).\n2. **Lowest Blended Token Cost**: **Qwen3.7 Flash** (Qwen / Alibaba) at **$0.055 per 1M blended tokens**.\n3. **Top Intelligence Frontier**: **Claude Fable 5.1** with an MMLU score of **96.8**.\n\n#### 💡 Cloud Provider Architectural Recommendation\n- For **high-volume background agents / extraction**, utilize **Qwen3.7 Flash** to maximize tokens per dollar.\n- For **complex reasoning and code generation**, utilize **Qwen3.7 Flash** or **Claude Fable 5.1** for optimal balance between accuracy and cost."
   },
   "models": [
     {
@@ -34,6 +34,22 @@
       "tokens_per_dollar": 18181818,
       "tokens_per_dollar_formatted": "18,181,818",
       "efficiency_score": 1609.09
+    },
+    {
+      "provider": "DeepSeek API",
+      "model": "DeepSeek V4.1 Flash",
+      "input_cost_per_1m": 0.0507,
+      "output_cost_per_1m": 0.2028,
+      "context_window": 1048576,
+      "region": "global",
+      "mmlu_score": 92.5,
+      "arena_elo": 1345,
+      "avg_throughput_tps": 90.0,
+      "category": "Next-Gen Open Reasoning",
+      "blended_cost_per_1m": 0.0887,
+      "tokens_per_dollar": 11273957,
+      "tokens_per_dollar_formatted": "11,273,957",
+      "efficiency_score": 1042.84
     },
     {
       "provider": "DeepSeek API",
@@ -260,27 +276,11 @@
       "efficiency_score": 180.29
     },
     {
-      "provider": "DeepSeek API",
-      "model": "DeepSeek V4.1 Flash",
-      "input_cost_per_1m": 0.3,
-      "output_cost_per_1m": 1.2,
-      "context_window": 1048576,
-      "region": "global",
-      "mmlu_score": 92.5,
-      "arena_elo": 1345,
-      "avg_throughput_tps": 90.0,
-      "category": "Next-Gen Open Reasoning",
-      "blended_cost_per_1m": 0.525,
-      "tokens_per_dollar": 1904761,
-      "tokens_per_dollar_formatted": "1,904,761",
-      "efficiency_score": 176.19
-    },
-    {
       "provider": "Qwen / Alibaba",
       "model": "Qwen3.8 27B",
       "input_cost_per_1m": 0.15,
       "output_cost_per_1m": 1.875,
-      "context_window": 1048575,
+      "context_window": 1024000,
       "region": "global",
       "mmlu_score": 91.0,
       "arena_elo": 1320,
@@ -902,18 +902,18 @@
     {
       "provider": "OpenAI / Azure",
       "model": "GPT-5.6 Sol",
-      "input_cost_per_1m": 4.4,
-      "output_cost_per_1m": 22.0,
+      "input_cost_per_1m": 4.0,
+      "output_cost_per_1m": 20.0,
       "context_window": 1050000,
       "region": "global",
       "mmlu_score": 93.6,
       "arena_elo": 1365,
       "avg_throughput_tps": 90.0,
       "category": "Frontier Reasoning",
-      "blended_cost_per_1m": 8.8,
-      "tokens_per_dollar": 113636,
-      "tokens_per_dollar_formatted": "113,636",
-      "efficiency_score": 10.64
+      "blended_cost_per_1m": 8.0,
+      "tokens_per_dollar": 125000,
+      "tokens_per_dollar_formatted": "125,000",
+      "efficiency_score": 11.7
     },
     {
       "provider": "Anthropic / AWS",
