@@ -3,7 +3,8 @@ LLM Evaluation & Dynamic Benchmark Ingestor
 Dynamically computes & matches model capability benchmarks for any API model.
 """
 import re
-from typing import List, Dict, Any
+from typing import Any
+
 
 class LLMEvalsIngestor:
     """Dynamically produces benchmark capability evaluations for API-ingested models."""
@@ -83,15 +84,15 @@ class LLMEvalsIngestor:
         "qwen": {"mmlu_score": 85.5, "arena_elo": 1255, "tps": 105.0, "category": "Coding Specialist"}
     }
 
-    def get_benchmarks_for_models(self, dynamic_models: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    def get_benchmarks_for_models(self, dynamic_models: list[dict[str, Any]]) -> list[dict[str, Any]]:
         """Dynamically matches or estimates benchmarks for API models using word boundaries."""
         benchmarks = []
-        
+
         for item in dynamic_models:
             name_raw = item["model"].lower()
             id_raw = item.get("model_id", "").lower()
             target_text = f"{name_raw} {id_raw}".replace("-", " ").replace(":", " ").replace("/", " ")
-            
+
             matched = False
             for key, val in self.KNOWN_BENCHMARKS.items():
                 pattern = r'\b' + re.escape(key.replace("-", " ")) + r'\b'
@@ -128,7 +129,7 @@ class LLMEvalsIngestor:
 
         return benchmarks
 
-    def get_benchmarks(self) -> List[Dict[str, Any]]:
+    def get_benchmarks(self) -> list[dict[str, Any]]:
         """Legacy default fallback interface."""
         return list(self.KNOWN_BENCHMARKS.values())
 

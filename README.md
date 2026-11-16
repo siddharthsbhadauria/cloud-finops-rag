@@ -1,65 +1,56 @@
-# 📊 Cloud-FinOps-RAG: Autonomous Multi-Cloud AI Tokenomics & Price Benchmark Evaluator
+# cloud-finops-rag
 
-[![FinOps Pipeline](https://github.com/siddharthsbhadauria/cloud-finops-rag/actions/workflows/daily_finops_rag.yml/badge.svg)](https://github.com/siddharthsbhadauria/cloud-finops-rag/actions/workflows/daily_finops_rag.yml)
-[![Pages Deployment](https://github.com/siddharthsbhadauria/cloud-finops-rag/actions/workflows/deploy_pages.yml/badge.svg)](https://github.com/siddharthsbhadauria/cloud-finops-rag/actions/workflows/deploy_pages.yml)
-[![Live Dashboard](https://img.shields.io/badge/Live%20Dashboard-GitHub%20Pages-6366f1?style=flat&logo=github)](https://siddharthsbhadauria.github.io/cloud-finops-rag/)
+[![CI](https://github.com/siddharthsbhadauria/cloud-finops-rag/actions/workflows/ci.yml/badge.svg)](https://github.com/siddharthsbhadauria/cloud-finops-rag/actions/workflows/ci.yml)
+[![Daily pipeline](https://github.com/siddharthsbhadauria/cloud-finops-rag/actions/workflows/daily_finops_rag.yml/badge.svg)](https://github.com/siddharthsbhadauria/cloud-finops-rag/actions/workflows/daily_finops_rag.yml)
 
-> 🌐 **Live Web Application**: [https://siddharthsbhadauria.github.io/cloud-finops-rag/](https://siddharthsbhadauria.github.io/cloud-finops-rag/)
+A daily benchmark of LLM API prices. Every day a GitHub Actions job pulls current prices for 60 models across 8 providers, checks them against a data contract, joins published MMLU scores and ranks each model in DuckDB by quality per dollar.
 
-**Cloud-FinOps-RAG** is a serverless, cloud-native data engineering pipeline and intelligence engine built on **GitHub Actions**. It automatically ingests multi-cloud AI tokenomics (AWS Bedrock, Azure OpenAI, GCP Vertex AI, DeepSeek), validates schemas using **Great Expectations** assertions, computes cost-per-intelligence ratios via **Polars & DuckDB**, generates vector search indices for RAG summaries, and publishes a live dashboard on **GitHub Pages**.
+**Dashboard:** https://siddharthsbhadauria.github.io/cloud-finops-rag/
 
----
+## How it works
 
-## 🏗️ Architecture Overview
-
-```mermaid
-flowchart LR
-    A["AWS / GCP / Azure Pricing APIs"] --> C["GitHub Actions CRON Pipeline"]
-    B["Hugging Face LLM Evals"] --> C
-    C -->|Python Ingestion| D["Great Expectations Quality Contract"]
-    D -->|Passed| E["Polars & DuckDB Analytics Engine"]
-    E -->|Tokens/Dollar & Efficiency Index| F["ChromaDB Vector & RAG Brief"]
-    F -->|Dataset Export| G["GitHub Pages Web Dashboard"]
+```
+GitHub Actions cron
+  -> OpenRouter models API (prices)       src/ingest/cloud_pricing.py
+  -> MMLU lookup table                    src/ingest/llm_evals.py
+  -> data contract                        src/quality/data_contracts.py
+  -> DuckDB join and ranking              src/analytics/finops_engine.py
+  -> JSON for the dashboard               generate_dataset.py
+  -> GitHub Pages                         index.html, app.js
 ```
 
----
+- **Prices** come from the OpenRouter models API, which lists per-token prices for each provider's hosted models. The pipeline keeps the top models per provider, 60 in total.
+- **Quality scores** come from a hand-maintained table of published MMLU results. Models that aren't in the table get an estimate based on size and context window. The dashboard marks those rows as estimates and leaves them out of the daily picks.
+- **The data contract** is plain Python. It stops the run if any field is missing, a price is negative or an MMLU score falls outside 0 to 100.
+- **DuckDB** loads prices and scores into tables, joins them and computes the scores in SQL. The result is kept in `data/finops.duckdb`.
+- **The daily summary** is a short Markdown brief filled in from a template. No LLM or vector search is involved; the repo name comes from an earlier plan.
 
-## 🛠️ Tech Stack & Engineering Concepts
+## The numbers
 
-* **Workflow Orchestration**: GitHub Actions (Scheduled Cron & Concurrency Control).
-* **Data Processing & Analytics Engine**: DuckDB (Embedded OLAP Engine) & Polars.
-* **Data Contracts & Quality Assertion**: Great Expectations schema assertion gates.
-* **Vector Indexing & RAG**: ChromaDB / FAISS & Sentence-Transformers (`all-MiniLM-L6-v2`).
-* **Frontend Web Application**: HTML5, Vanilla CSS Glassmorphism Design System, JavaScript.
-* **Hosting**: GitHub Pages via `actions/deploy-pages@v4`.
+| Metric | Formula |
+| :--- | :--- |
+| Blended price | 75% of the input price + 25% of the output price, per million tokens |
+| Tokens per dollar | 1,000,000 / blended price |
+| Value score | MMLU / blended price |
 
----
+The value score ignores latency, context length and task fit. Treat it as a first filter, not a verdict.
 
-## 📊 Benchmark Metrics Calculated
-
-1. **Blended Token Cost ($ / 1M)**: Weighted 75% Input Tokens + 25% Output Tokens.
-2. **Tokens Per Dollar**: `1,000,000 / Blended Token Cost`.
-3. **Efficiency Score Index**: `MMLU Score / Blended Token Cost`.
-
----
-
-## 🚀 Running Locally
+## Run it locally
 
 ```bash
-# 1. Clone repository
-git clone https://github.com/siddharthsbhadauria/cloud-finops-rag.git
-cd cloud-finops-rag
-
-# 2. Install dependencies
 pip install -r requirements.txt
-
-# 3. Execute master data pipeline
-python generate_dataset.py
+python generate_dataset.py          # writes data/finops_dataset.json and .js
+python -m http.server               # then open http://localhost:8000
 ```
 
-Open `index.html` in your browser to view the interactive FinOps dashboard!
+Tests and lint:
 
----
+```bash
+pip install -r requirements-dev.txt
+ruff check .
+pytest -q
+```
 
-## 🛡️ License
-Distributed under the MIT License.
+## License
+
+MIT

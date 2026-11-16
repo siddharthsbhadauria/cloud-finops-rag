@@ -1,16 +1,17 @@
 """
 Master Data Orchestrator
-Executes full ingestion, validation contracts, DuckDB transformations, RAG brief generation, and JSON web dataset export.
+Runs ingestion, the data contract, DuckDB ranking and the daily summary, then exports JSON for the dashboard.
 """
-import os
 import json
-from datetime import datetime, timezone
+import os
+from datetime import UTC, datetime
 
+from src.analytics.finops_engine import FinOpsEngine
 from src.ingest.cloud_pricing import CloudPricingIngestor
 from src.ingest.llm_evals import LLMEvalsIngestor
 from src.quality.data_contracts import DataContractsEngine
-from src.analytics.finops_engine import FinOpsEngine
 from src.rag.vector_finops import VectorFinOpsEngine
+
 
 def run_pipeline():
     print("[INFO] Starting Cloud-FinOps-RAG Data Pipeline Execution...")
@@ -34,7 +35,7 @@ def run_pipeline():
 
     # 5. Export JSON Dataset for GitHub Pages Frontend
     dataset = {
-        "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "generated_at": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "total_models_tracked": len(analyzed_models),
         "providers": list(set(m["provider"] for m in analyzed_models)),
         "summary": rag_summary,

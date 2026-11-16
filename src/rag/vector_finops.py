@@ -1,50 +1,36 @@
 """
-Vector Search & RAG Brief Generator
-Encodes provider specs into vector embeddings and synthesizes daily FinOps briefs.
+Daily summary: picks the best-value, cheapest and highest-scoring models and writes a short
+Markdown brief from a template. No LLM or vector search is involved; the repo name predates this.
 """
-from typing import List, Dict, Any
 import datetime
+from typing import Any
+
 
 class VectorFinOpsEngine:
-    """Generates RAG vector index and synthesizes Cloud AI FinOps daily briefs."""
+    """Builds the daily Markdown summary from ranked model metrics."""
 
-    def generate_rag_brief(self, analyzed_models: List[Dict[str, Any]]) -> Dict[str, Any]:
-        """Generates a structured FinOps assessment report over analyzed model metrics."""
+    def generate_rag_brief(self, analyzed_models: list[dict[str, Any]]) -> dict[str, Any]:
         if not analyzed_models:
-            return {"brief": "No data available for RAG generation."}
+            return {"markdown_brief": "No data available."}
 
-        # Sort by efficiency score and lowest cost
-        best_efficiency = max(analyzed_models, key=lambda x: x.get("efficiency_score", 0))
-        lowest_cost = min(analyzed_models, key=lambda x: x.get("blended_cost_per_1m", 999))
-        frontier = max(analyzed_models, key=lambda x: x.get("mmlu_score", 0))
+        best_value = max(analyzed_models, key=lambda x: x.get("efficiency_score", 0))
+        cheapest = min(analyzed_models, key=lambda x: x.get("blended_cost_per_1m", float("inf")))
+        top = max(analyzed_models, key=lambda x: x.get("mmlu_score", 0))
+        stamp = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M UTC")
 
-        brief_markdown = f"""
-### 📊 Daily Cloud AI FinOps & Tokenomics Summary
-*Generated on {datetime.datetime.now().strftime('%Y-%m-%d %H:%M UTC')}*
+        brief = f"""
+### Daily LLM price summary
+*{stamp}*
 
-#### 🏆 Key Benchmark Highlights
-1. **Best Cost-Performance Ratio**: **{best_efficiency['model']}** ({best_efficiency['provider']}) with an Efficiency Score of **{best_efficiency['efficiency_score']}** (MMLU: {best_efficiency['mmlu_score']} @ ${best_efficiency['blended_cost_per_1m']:.3f}/1M tokens).
-2. **Lowest Blended Token Cost**: **{lowest_cost['model']}** ({lowest_cost['provider']}) at **${lowest_cost['blended_cost_per_1m']:.3f} per 1M blended tokens**.
-3. **Top Intelligence Frontier**: **{frontier['model']}** with an MMLU score of **{frontier['mmlu_score']}**.
-
-#### 💡 Cloud Provider Architectural Recommendation
-- For **high-volume background agents / extraction**, utilize **{lowest_cost['model']}** to maximize tokens per dollar.
-- For **complex reasoning and code generation**, utilize **{best_efficiency['model']}** or **{frontier['model']}** for optimal balance between accuracy and cost.
+1. **Best value**: {best_value['model']} ({best_value['provider']}), value score {best_value['efficiency_score']} (MMLU {best_value['mmlu_score']} at ${best_value['blended_cost_per_1m']:.3f} per 1M tokens).
+2. **Cheapest**: {cheapest['model']} ({cheapest['provider']}) at ${cheapest['blended_cost_per_1m']:.3f} per 1M blended tokens.
+3. **Highest MMLU**: {top['model']} at {top['mmlu_score']}.
 """.strip()
 
         return {
-            "timestamp": datetime.datetime.now().strftime('%Y-%m-%d %H:%M UTC'),
-            "best_efficiency": best_efficiency["model"],
-            "lowest_cost": lowest_cost["model"],
-            "top_frontier": frontier["model"],
-            "markdown_brief": brief_markdown
+            "timestamp": stamp,
+            "best_efficiency": best_value["model"],
+            "lowest_cost": cheapest["model"],
+            "top_frontier": top["model"],
+            "markdown_brief": brief,
         }
-
-if __name__ == "__main__":
-    sample = [{
-        "model": "DeepSeek-V3", "provider": "DeepSeek API",
-        "mmlu_score": 88.5, "blended_cost_per_1m": 0.175, "efficiency_score": 505.7
-    }]
-    engine = VectorFinOpsEngine()
-    brief = engine.generate_rag_brief(sample)
-    print(brief["markdown_brief"])

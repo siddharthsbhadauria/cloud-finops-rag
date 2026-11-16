@@ -2,11 +2,11 @@
 Multi-Cloud & AI Model Dynamic API Ingestor
 Dynamically fetches live AI models & tokenomics from public APIs with balanced provider coverage.
 """
-import requests
-import json
-import os
 import re
-from typing import List, Dict, Any
+from typing import Any
+
+import requests
+
 
 class CloudPricingIngestor:
     """Dynamically ingests AI model pricing and specs from OpenRouter & Cloud APIs."""
@@ -42,7 +42,7 @@ class CloudPricingIngestor:
                 # Earlier patterns have higher priority
                 score += (len(self.PRIORITY_PATTERNS) - idx) * 10
                 break
-        
+
         # Boost newer version numbers in general
         if "5.1" in combined or "5.0" in combined or "-5" in combined:
             score += 25
@@ -53,14 +53,14 @@ class CloudPricingIngestor:
 
         return score
 
-    def fetch_dynamic_llm_prices(self, top_n: int = 60) -> List[Dict[str, Any]]:
+    def fetch_dynamic_llm_prices(self, top_n: int = 60) -> list[dict[str, Any]]:
         """Queries OpenRouter public API, balancing model coverage across all 8 top providers."""
         try:
             res = requests.get(self.OPENROUTER_API, timeout=15)
             res.raise_for_status()
             data = res.json().get('data', [])
 
-            models_by_provider: Dict[str, List[Dict[str, Any]]] = {}
+            models_by_provider: dict[str, list[dict[str, Any]]] = {}
 
             for item in data:
                 model_id = item.get("id", "")
@@ -107,7 +107,7 @@ class CloudPricingIngestor:
                 # Clean model display name
                 clean_name = name
                 prefixes = [
-                    "Anthropic: ", "Google: ", "OpenAI: ", "DeepSeek: ", "Meta: ", 
+                    "Anthropic: ", "Google: ", "OpenAI: ", "DeepSeek: ", "Meta: ",
                     "SpaceXAI: ", "xAI: ", "Mistral: ", "Qwen: ", "AionLabs: "
                 ]
                 for pfx in prefixes:
@@ -142,7 +142,7 @@ class CloudPricingIngestor:
 
             # 1. Round-robin: Pick top 7 models from EACH major provider
             target_per_provider = max(6, top_n // max(1, len(models_by_provider)))
-            for prov, items in models_by_provider.items():
+            for _prov, items in models_by_provider.items():
                 # Sort by priority score desc, non-zero price first, then context window
                 items.sort(key=lambda x: (
                     -x["priority_score"],
@@ -152,7 +152,7 @@ class CloudPricingIngestor:
                 selected_models.extend(items[:target_per_provider])
 
             # 2. Add remaining high priority models across all providers
-            for prov, items in models_by_provider.items():
+            for _prov, items in models_by_provider.items():
                 selected_models.extend(items[target_per_provider:])
 
             # Deduplicate by model clean name & model_id
@@ -171,7 +171,7 @@ class CloudPricingIngestor:
             print(f"[API ERROR] Failed to query dynamic OpenRouter API: {e}")
             return []
 
-    def get_all_llm_pricing(self, top_n: int = 60) -> List[Dict[str, Any]]:
+    def get_all_llm_pricing(self, top_n: int = 60) -> list[dict[str, Any]]:
         """Returns dynamic API pricing data."""
         return self.fetch_dynamic_llm_prices(top_n=top_n)
 
