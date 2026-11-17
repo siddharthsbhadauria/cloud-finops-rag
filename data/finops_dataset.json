@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-11-16T12:23:51Z",
+  "generated_at": "2026-11-17T12:43:41Z",
   "total_models_tracked": 60,
   "providers": [
-    "Meta AI",
-    "DeepSeek API",
     "xAI / Grok",
-    "Google / GCP",
+    "Anthropic / AWS",
     "OpenAI / Azure",
-    "Mistral AI",
+    "Meta AI",
     "Qwen / Alibaba",
-    "Anthropic / AWS"
+    "Google / GCP",
+    "DeepSeek API",
+    "Mistral AI"
   ],
   "summary": {
-    "timestamp": "2026-11-16 12:23 UTC",
+    "timestamp": "2026-11-17 12:43 UTC",
     "best_efficiency": "Qwen3.7 Flash",
     "lowest_cost": "Qwen3.7 Flash",
     "top_frontier": "Claude Fable 5.1",
-    "markdown_brief": "### Daily LLM price summary\n*2026-11-16 12:23 UTC*\n\n1. **Best value**: Qwen3.7 Flash (Qwen / Alibaba), value score 1609.09 (MMLU 88.5 at $0.055 per 1M tokens).\n2. **Cheapest**: Qwen3.7 Flash (Qwen / Alibaba) at $0.055 per 1M blended tokens.\n3. **Highest MMLU**: Claude Fable 5.1 at 96.8."
+    "markdown_brief": "### Daily LLM price summary\n*2026-11-17 12:43 UTC*\n\n1. **Best value**: Qwen3.7 Flash (Qwen / Alibaba), value score 1609.09 (MMLU 88.5 at $0.055 per 1M tokens).\n2. **Cheapest**: Qwen3.7 Flash (Qwen / Alibaba) at $0.055 per 1M blended tokens.\n3. **Highest MMLU**: Claude Fable 5.1 at 96.8."
   },
   "models": [
     {
@@ -34,6 +34,22 @@
       "tokens_per_dollar": 18181818,
       "efficiency_score": 1609.09,
       "tokens_per_dollar_formatted": "18,181,818"
+    },
+    {
+      "provider": "DeepSeek API",
+      "model": "DeepSeek V4.1 Flash",
+      "input_cost_per_1m": 0.0507,
+      "output_cost_per_1m": 0.2028,
+      "context_window": 1048576,
+      "region": "global",
+      "mmlu_score": 92.5,
+      "arena_elo": 1345,
+      "avg_throughput_tps": 90.0,
+      "category": "Next-Gen Open Reasoning",
+      "blended_cost_per_1m": 0.0887,
+      "tokens_per_dollar": 11273957,
+      "efficiency_score": 1042.84,
+      "tokens_per_dollar_formatted": "11,273,957"
     },
     {
       "provider": "DeepSeek API",
@@ -100,6 +116,22 @@
       "tokens_per_dollar_formatted": "8,000,000"
     },
     {
+      "provider": "DeepSeek API",
+      "model": "DeepSeek V4.1 Flash 1017",
+      "input_cost_per_1m": 0.036,
+      "output_cost_per_1m": 0.5,
+      "context_window": 1048576,
+      "region": "global",
+      "mmlu_score": 92.5,
+      "arena_elo": 1345,
+      "avg_throughput_tps": 90.0,
+      "category": "Next-Gen Open Reasoning",
+      "blended_cost_per_1m": 0.152,
+      "tokens_per_dollar": 6578947,
+      "efficiency_score": 608.55,
+      "tokens_per_dollar_formatted": "6,578,947"
+    },
+    {
       "provider": "Meta AI",
       "model": "Llama 4 Scout",
       "input_cost_per_1m": 0.1,
@@ -114,22 +146,6 @@
       "tokens_per_dollar": 6666666,
       "efficiency_score": 597.33,
       "tokens_per_dollar_formatted": "6,666,666"
-    },
-    {
-      "provider": "DeepSeek API",
-      "model": "DeepSeek V4.1 Flash",
-      "input_cost_per_1m": 0.14,
-      "output_cost_per_1m": 0.42,
-      "context_window": 1048576,
-      "region": "global",
-      "mmlu_score": 92.5,
-      "arena_elo": 1345,
-      "avg_throughput_tps": 90.0,
-      "category": "Next-Gen Open Reasoning",
-      "blended_cost_per_1m": 0.21,
-      "tokens_per_dollar": 4761904,
-      "efficiency_score": 440.48,
-      "tokens_per_dollar_formatted": "4,761,904"
     },
     {
       "provider": "Qwen / Alibaba",
@@ -162,22 +178,6 @@
       "tokens_per_dollar": 4347826,
       "efficiency_score": 381.74,
       "tokens_per_dollar_formatted": "4,347,826"
-    },
-    {
-      "provider": "DeepSeek API",
-      "model": "DeepSeek V4.1 Flash 1017",
-      "input_cost_per_1m": 0.15,
-      "output_cost_per_1m": 0.6,
-      "context_window": 1048576,
-      "region": "global",
-      "mmlu_score": 92.5,
-      "arena_elo": 1345,
-      "avg_throughput_tps": 90.0,
-      "category": "Next-Gen Open Reasoning",
-      "blended_cost_per_1m": 0.2625,
-      "tokens_per_dollar": 3809523,
-      "efficiency_score": 352.38,
-      "tokens_per_dollar_formatted": "3,809,523"
     },
     {
       "provider": "Mistral AI",
