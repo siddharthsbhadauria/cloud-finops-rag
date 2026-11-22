@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-11-21T12:01:37Z",
+  "generated_at": "2026-11-22T12:14:21Z",
   "total_models_tracked": 60,
   "providers": [
-    "OpenAI / Azure",
     "DeepSeek API",
     "Meta AI",
-    "Qwen / Alibaba",
-    "Mistral AI",
-    "Anthropic / AWS",
     "xAI / Grok",
-    "Google / GCP"
+    "Mistral AI",
+    "Google / GCP",
+    "Qwen / Alibaba",
+    "OpenAI / Azure",
+    "Anthropic / AWS"
   ],
   "summary": {
-    "timestamp": "2026-11-21 12:01 UTC",
+    "timestamp": "2026-11-22 12:14 UTC",
     "best_efficiency": "Qwen3.7 Flash",
     "lowest_cost": "Qwen3.7 Flash",
     "top_frontier": "Claude Fable 5.1",
-    "markdown_brief": "### Daily LLM price summary\n*2026-11-21 12:01 UTC*\n\n1. **Best value**: Qwen3.7 Flash (Qwen / Alibaba), value score 1609.09 (MMLU 88.5 at $0.055 per 1M tokens).\n2. **Cheapest**: Qwen3.7 Flash (Qwen / Alibaba) at $0.055 per 1M blended tokens.\n3. **Highest MMLU**: Claude Fable 5.1 at 96.8."
+    "markdown_brief": "### Daily LLM price summary\n*2026-11-22 12:14 UTC*\n\n1. **Best value**: Qwen3.7 Flash (Qwen / Alibaba), value score 1609.09 (MMLU 88.5 at $0.055 per 1M tokens).\n2. **Cheapest**: Qwen3.7 Flash (Qwen / Alibaba) at $0.055 per 1M blended tokens.\n3. **Highest MMLU**: Claude Fable 5.1 at 96.8."
   },
   "models": [
     {
@@ -260,6 +260,22 @@
       "tokens_per_dollar_formatted": "3,092,145"
     },
     {
+      "provider": "Qwen / Alibaba",
+      "model": "Qwen3.8 27B",
+      "input_cost_per_1m": 0.035,
+      "output_cost_per_1m": 1.5,
+      "context_window": 1024000,
+      "region": "global",
+      "mmlu_score": 91.0,
+      "arena_elo": 1320,
+      "avg_throughput_tps": 105.0,
+      "category": "High-Efficiency Coding Frontier",
+      "blended_cost_per_1m": 0.4012,
+      "tokens_per_dollar": 2492522,
+      "efficiency_score": 226.82,
+      "tokens_per_dollar_formatted": "2,492,522"
+    },
+    {
       "provider": "OpenAI / Azure",
       "model": "GPT-5.6 Luna",
       "input_cost_per_1m": 0.2,
@@ -322,22 +338,6 @@
       "tokens_per_dollar": 1951219,
       "efficiency_score": 180.29,
       "tokens_per_dollar_formatted": "1,951,219"
-    },
-    {
-      "provider": "Qwen / Alibaba",
-      "model": "Qwen3.8 27B",
-      "input_cost_per_1m": 0.06,
-      "output_cost_per_1m": 1.96,
-      "context_window": 1024000,
-      "region": "global",
-      "mmlu_score": 91.0,
-      "arena_elo": 1320,
-      "avg_throughput_tps": 105.0,
-      "category": "High-Efficiency Coding Frontier",
-      "blended_cost_per_1m": 0.535,
-      "tokens_per_dollar": 1869158,
-      "efficiency_score": 170.09,
-      "tokens_per_dollar_formatted": "1,869,158"
     },
     {
       "provider": "Meta AI",
