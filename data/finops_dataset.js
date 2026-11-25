@@ -1,22 +1,22 @@
 window.FINOPS_DATA = {
-  "generated_at": "2026-11-24T14:29:47Z",
+  "generated_at": "2026-11-25T13:50:38Z",
   "total_models_tracked": 60,
   "providers": [
-    "xAI / Grok",
-    "Qwen / Alibaba",
-    "OpenAI / Azure",
+    "Anthropic / AWS",
     "Google / GCP",
-    "DeepSeek API",
-    "Mistral AI",
     "Meta AI",
-    "Anthropic / AWS"
+    "xAI / Grok",
+    "DeepSeek API",
+    "OpenAI / Azure",
+    "Mistral AI",
+    "Qwen / Alibaba"
   ],
   "summary": {
-    "timestamp": "2026-11-24 14:29 UTC",
+    "timestamp": "2026-11-25 13:50 UTC",
     "best_efficiency": "Qwen3.7 Flash",
     "lowest_cost": "Qwen3.7 Flash",
     "top_frontier": "Claude Fable 5.1",
-    "markdown_brief": "### Daily LLM price summary\n*2026-11-24 14:29 UTC*\n\n1. **Best value**: Qwen3.7 Flash (Qwen / Alibaba), value score 1609.09 (MMLU 88.5 at $0.055 per 1M tokens).\n2. **Cheapest**: Qwen3.7 Flash (Qwen / Alibaba) at $0.055 per 1M blended tokens.\n3. **Highest MMLU**: Claude Fable 5.1 at 96.8."
+    "markdown_brief": "### Daily LLM price summary\n*2026-11-25 13:50 UTC*\n\n1. **Best value**: Qwen3.7 Flash (Qwen / Alibaba), value score 1609.09 (MMLU 88.5 at $0.055 per 1M tokens).\n2. **Cheapest**: Qwen3.7 Flash (Qwen / Alibaba) at $0.055 per 1M blended tokens.\n3. **Highest MMLU**: Claude Fable 5.1 at 96.8."
   },
   "models": [
     {
@@ -53,22 +53,6 @@ window.FINOPS_DATA = {
     },
     {
       "provider": "DeepSeek API",
-      "model": "DeepSeek V4.1 Flash 1017",
-      "input_cost_per_1m": 0.03,
-      "output_cost_per_1m": 0.2,
-      "context_window": 1048576,
-      "region": "global",
-      "mmlu_score": 92.5,
-      "arena_elo": 1345,
-      "avg_throughput_tps": 90.0,
-      "category": "Next-Gen Open Reasoning",
-      "blended_cost_per_1m": 0.0725,
-      "tokens_per_dollar": 13793103,
-      "efficiency_score": 1275.86,
-      "tokens_per_dollar_formatted": "13,793,103"
-    },
-    {
-      "provider": "DeepSeek API",
       "model": "DeepSeek V4.1 Flash",
       "input_cost_per_1m": 0.0507,
       "output_cost_per_1m": 0.2028,
@@ -98,6 +82,22 @@ window.FINOPS_DATA = {
       "tokens_per_dollar": 9157509,
       "efficiency_score": 828.75,
       "tokens_per_dollar_formatted": "9,157,509"
+    },
+    {
+      "provider": "Mistral AI",
+      "model": "Ministral 3 3B 2512",
+      "input_cost_per_1m": 0.1,
+      "output_cost_per_1m": 0.1,
+      "context_window": 131072,
+      "region": "global",
+      "mmlu_score": 74.6,
+      "arena_elo": 1254,
+      "avg_throughput_tps": 85.0,
+      "category": "API AI Model",
+      "blended_cost_per_1m": 0.1,
+      "tokens_per_dollar": 10000000,
+      "efficiency_score": 746.0,
+      "tokens_per_dollar_formatted": "10,000,000"
     },
     {
       "provider": "Mistral AI",
@@ -228,6 +228,22 @@ window.FINOPS_DATA = {
       "tokens_per_dollar_formatted": "4,347,826"
     },
     {
+      "provider": "DeepSeek API",
+      "model": "DeepSeek V4.1 Flash 1017",
+      "input_cost_per_1m": 0.15,
+      "output_cost_per_1m": 0.6,
+      "context_window": 1048576,
+      "region": "global",
+      "mmlu_score": 92.5,
+      "arena_elo": 1345,
+      "avg_throughput_tps": 90.0,
+      "category": "Next-Gen Open Reasoning",
+      "blended_cost_per_1m": 0.2625,
+      "tokens_per_dollar": 3809523,
+      "efficiency_score": 352.38,
+      "tokens_per_dollar_formatted": "3,809,523"
+    },
+    {
       "provider": "Mistral AI",
       "model": "Mistral Small 4",
       "input_cost_per_1m": 0.15,
@@ -242,22 +258,6 @@ window.FINOPS_DATA = {
       "tokens_per_dollar": 3809523,
       "efficiency_score": 323.05,
       "tokens_per_dollar_formatted": "3,809,523"
-    },
-    {
-      "provider": "DeepSeek API",
-      "model": "DeepSeek V4 Flash Vision Exp",
-      "input_cost_per_1m": 0.2156,
-      "output_cost_per_1m": 0.6468,
-      "context_window": 1048576,
-      "region": "global",
-      "mmlu_score": 90.5,
-      "arena_elo": 1315,
-      "avg_throughput_tps": 165.0,
-      "category": "Ultra Low Cost High Speed",
-      "blended_cost_per_1m": 0.3234,
-      "tokens_per_dollar": 3092145,
-      "efficiency_score": 279.84,
-      "tokens_per_dollar_formatted": "3,092,145"
     },
     {
       "provider": "Qwen / Alibaba",
@@ -340,6 +340,22 @@ window.FINOPS_DATA = {
       "tokens_per_dollar_formatted": "1,951,219"
     },
     {
+      "provider": "DeepSeek API",
+      "model": "DeepSeek V4 Flash Vision Exp",
+      "input_cost_per_1m": 0.44,
+      "output_cost_per_1m": 1.32,
+      "context_window": 1048576,
+      "region": "global",
+      "mmlu_score": 90.5,
+      "arena_elo": 1315,
+      "avg_throughput_tps": 165.0,
+      "category": "Ultra Low Cost High Speed",
+      "blended_cost_per_1m": 0.66,
+      "tokens_per_dollar": 1515151,
+      "efficiency_score": 137.12,
+      "tokens_per_dollar_formatted": "1,515,151"
+    },
+    {
       "provider": "Meta AI",
       "model": "Llama 3.3 70B Instruct",
       "input_cost_per_1m": 0.71,
@@ -404,36 +420,20 @@ window.FINOPS_DATA = {
       "tokens_per_dollar_formatted": "1,176,470"
     },
     {
-      "provider": "Mistral AI",
-      "model": "Mistral Medium 3",
-      "input_cost_per_1m": 0.44,
-      "output_cost_per_1m": 2.2,
-      "context_window": 131072,
+      "provider": "DeepSeek API",
+      "model": "DeepSeek V4 Pro 0423",
+      "input_cost_per_1m": 0.8367,
+      "output_cost_per_1m": 1.5228,
+      "context_window": 1048576,
       "region": "global",
-      "mmlu_score": 87.5,
-      "arena_elo": 1275,
-      "avg_throughput_tps": 110.0,
-      "category": "Mid-Tier Specialist",
-      "blended_cost_per_1m": 0.88,
-      "tokens_per_dollar": 1136363,
-      "efficiency_score": 99.43,
-      "tokens_per_dollar_formatted": "1,136,363"
-    },
-    {
-      "provider": "Mistral AI",
-      "model": "Mistral Medium 3.1",
-      "input_cost_per_1m": 0.44,
-      "output_cost_per_1m": 2.2,
-      "context_window": 131072,
-      "region": "global",
-      "mmlu_score": 87.5,
-      "arena_elo": 1275,
-      "avg_throughput_tps": 110.0,
-      "category": "Mid-Tier Specialist",
-      "blended_cost_per_1m": 0.88,
-      "tokens_per_dollar": 1136363,
-      "efficiency_score": 99.43,
-      "tokens_per_dollar_formatted": "1,136,363"
+      "mmlu_score": 93.2,
+      "arena_elo": 1355,
+      "avg_throughput_tps": 90.0,
+      "category": "Next-Gen Open Reasoning Leader",
+      "blended_cost_per_1m": 1.0082,
+      "tokens_per_dollar": 991866,
+      "efficiency_score": 92.44,
+      "tokens_per_dollar_formatted": "991,866"
     },
     {
       "provider": "Mistral AI",
@@ -514,22 +514,6 @@ window.FINOPS_DATA = {
       "tokens_per_dollar": 640000,
       "efficiency_score": 58.56,
       "tokens_per_dollar_formatted": "640,000"
-    },
-    {
-      "provider": "DeepSeek API",
-      "model": "DeepSeek V4 Pro 0423",
-      "input_cost_per_1m": 1.28,
-      "output_cost_per_1m": 2.56,
-      "context_window": 1048576,
-      "region": "global",
-      "mmlu_score": 93.2,
-      "arena_elo": 1355,
-      "avg_throughput_tps": 90.0,
-      "category": "Next-Gen Open Reasoning Leader",
-      "blended_cost_per_1m": 1.6,
-      "tokens_per_dollar": 625000,
-      "efficiency_score": 58.25,
-      "tokens_per_dollar_formatted": "625,000"
     },
     {
       "provider": "xAI / Grok",
@@ -721,6 +705,22 @@ window.FINOPS_DATA = {
       "blended_cost_per_1m": 3.0,
       "tokens_per_dollar": 333333,
       "efficiency_score": 29.17,
+      "tokens_per_dollar_formatted": "333,333"
+    },
+    {
+      "provider": "Mistral AI",
+      "model": "Mistral Large 2407",
+      "input_cost_per_1m": 2.0,
+      "output_cost_per_1m": 6.0,
+      "context_window": 131072,
+      "region": "global",
+      "mmlu_score": 84.6,
+      "arena_elo": 1334,
+      "avg_throughput_tps": 85.0,
+      "category": "API AI Model",
+      "blended_cost_per_1m": 3.0,
+      "tokens_per_dollar": 333333,
+      "efficiency_score": 28.2,
       "tokens_per_dollar_formatted": "333,333"
     },
     {
